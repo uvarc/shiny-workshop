@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>MAIN.utf8</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="MAIN_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="MAIN_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal .slide-menu-button {
+      left: 105px !important;
+    }
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <link href="MAIN_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="MAIN_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section class="slide level2">
+
+<style>
+.container{
+    display: flex;
+}
+.colsmall {
+    flex: 0.5;
+}
+.col{
+    flex: 1;
+}
+.col2{
+    flex: 2;
+}
+.col3{
+    flex: 3;
+}
+.col4{
+    flex: 4;
+}
+</style>
+<style type="text/css">
+  .reveal p {
+    text-align: left;
+  }
+  .reveal ul {
+    display: block;
+  }
+  .reveal ol {
+    display: block;
+  }
+</style>
+</section>
+<section><section id="section" class="title-slide slide level1" data-background-image="./images/title-slide.jpg"><h1></h1></section><section class="slide level2">
+
+</section></section>
+<section><section id="section-1" class="title-slide slide level1" data-background-image="./images/asking-for-help.jpg"><h1></h1></section><section id="additional-help" class="slide level2">
+<h2>Additional Help</h2>
+<p><a href="mailto:hpc-support@virginia.edu" class="email">hpc-support@virginia.edu</a></p>
+<table>
+<thead>
+<tr class="header">
+<th>Office Hours</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tuesday 3-5pm</td>
+<td>PLSB 430</td>
+</tr>
+<tr class="even">
+<td>Wednesday 3-5pm</td>
+<td>Brown Library “Worst Cat” Table</td>
+</tr>
+<tr class="odd">
+<td>Thursday 10am-12pm</td>
+<td>Health Sciences Library Mill Room</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section><section id="computer-setup" class="title-slide slide level1"><h1>Computer Setup</h1></section><section id="what-youll-need" class="slide level2">
+<h2>What You’ll Need</h2>
+<ol type="1">
+<li><strong>Development</strong> server (just your computer!)</li>
+<li><strong>Deployment</strong> server (shinyapps.io, DCOS)</li>
+</ol>
+</section><section id="development-server" class="slide level2">
+<h2>Development Server</h2>
+<p>This is where you will write and test the code for your Shiny app. You can interact with your app, but no one else can.</p>
+<p><img data-src="images/development-server.jpg" /></p>
+<p>You will spend most of your time on your development server.</p>
+</section><section id="deployment-server" class="slide level2">
+<h2>Deployment Server</h2>
+<p>Once you’re ready to share your app, it’s time to move it to a deployment server (deploy your app).</p>
+<p><img data-src="images/deployment-server.jpg" /></p>
+<p>Your development server is no longer serving your app.</p>
+</section><section id="set-up-your-development-server" class="slide level2">
+<h2>Set up your development server</h2>
+<p><strong>Option 1</strong>: Clone the GitHub Repository</p>
+<ol type="1">
+<li>Open the terminal.</li>
+<li><code>git clone https://github.com/uvarc/shiny-workshop</code></li>
+</ol>
+<p><br></p>
+<p><strong>Option 2</strong>: Create a New R Project</p>
+<ol type="1">
+<li><strong>File</strong> &gt; <strong>New Project</strong> &gt; <strong>Version Control</strong> &gt; <strong>Git</strong></li>
+<li>Repository URL: <a href="https://github.com/uvarc/shiny-workshop" class="uri">https://github.com/uvarc/shiny-workshop</a></li>
+<li><strong>Create Project</strong></li>
+</ol>
+<p>Run <code>packages-for-workshop.R</code></p>
+</section><section id="set-up-your-deployment-server" class="slide level2">
+<h2>Set up your deployment server</h2>
+<p>Create a free account on shinyapps.io.</p>
+<p>Can host 5 apps on shinyapps.io for free.</p>
+<p><br></p>
+<p>You can also host your apps on UVA servers (beta): <a href="https://www.rc.virginia.edu/userinfo/microservices/" class="uri">https://www.rc.virginia.edu/userinfo/microservices/</a></p>
+</section></section>
+<section><section id="workshop-files" class="title-slide slide level1"><h1>Workshop Files</h1></section><section id="file-organization" class="slide level2">
+<h2>File Organization</h2>
+<ul>
+<li><p>Project Directory</p>
+<ul>
+<li><strong><code>slides/</code></strong>: contains all the RMarkdown files/slides for this workshop
+<ul>
+<li>Knit <code>MAIN.Rmd</code> to see the main slideshow</li>
+<li>Each section is a separate RMarkdown file</li>
+</ul></li>
+<li><strong><code>projects/</code></strong>: contains all the code we’ll be working with today
+<ul>
+<li>Each app will live in a separate directory</li>
+</ul></li>
+<li><strong><code>sandbox/</code></strong>: place to put code snippets or quick demos</li>
+</ul></li>
+</ul>
+</section><section id="creating-a-new-shiny-project" class="slide level2">
+<h2>Creating a new Shiny project</h2>
+<p>How do you create a new blank Shiny app? Create a new Shiny project in <code>sandbox</code>.</p>
+<p><br></p>
+<p>Poke around RStudio and try on your own, or peer over a neighbor’s shoulder.</p>
+</section><section id="old-faithful" class="slide level2">
+<h2>Old Faithful</h2>
+<p>Using <strong>New Project</strong> -&gt; <strong>Shiny Web App</strong> creates a living, breathing Shiny App</p>
+<p><img data-src="images/old-faithful.png" /></p>
+</section><section id="a-better-way-to-do-it" class="slide level2">
+<h2>A better way to do it</h2>
+<ol type="1">
+<li>Open a new R Script file.</li>
+<li>Start typing <code>shinyapp</code> and press <strong>Tab</strong> to autocomplete.</li>
+</ol>
+<ul>
+<li>This will expand into a “snippet” of code–the skeleton of a Shiny App.</li>
+</ul>
+<ol start="3" type="1">
+<li>Save the file in <code>Sandbox</code> and run the app.</li>
+</ol>
+<p><br></p>
+<p>It’s still a working Shiny app–it’s just doesn’t do anything. Starting from the snippet is less error-prone than creating a new project and deleting the guts.</p>
+<p>Stop an app by clicking the STOP button in the console.</p>
+</section></section>
+<section><section id="what-is-a-shiny-app" class="title-slide slide level1"><h1>What is a Shiny app?</h1></section><section id="shiny-apps-are-just-webpages" class="slide level2">
+<h2>Shiny apps are just webpages</h2>
+<p>Webpages are made up of 2 main components</p>
+<ol type="1">
+<li><strong>HTML/CSS</strong>: what your app looks like (the <strong>form</strong>)</li>
+<li><strong>JavaScript</strong>: what your app does (the <strong>function</strong>)</li>
+</ol>
+<p><br></p>
+<p>The difference between Shiny apps and regular webpages: Shiny apps are powered by an R session</p>
+</section><section id="creating-a-shiny-app" class="slide level2">
+<h2>Creating a Shiny app</h2>
+<ol type="1">
+<li>Regular R stuff: writing code to manipulate and analyze data, visualize with graphs, etc…</li>
+</ol>
+<p><br></p>
+<ol start="2" type="1">
+<li><p>Create a user interface</p></li>
+<li><p>Connect <strong>1</strong> to <strong>2</strong> with <strong>reactive logic</strong></p></li>
+</ol>
+</section><section id="section-2" class="slide level2" data-background-image="./images/knight-bus.jpg">
+<h2></h2>
+</section><section id="shiny-bridges-two-worlds-of-r-programming" class="slide level2">
+<h2>Shiny Bridges Two Worlds of R Programming</h2>
+<table>
+<thead>
+<tr class="header">
+<th>1. <strong>Muggle World</strong></th>
+<th>2. <strong>Wizarding World</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>- Regular R code</td>
+<td>- Reactives</td>
+</tr>
+<tr class="even">
+<td>- Functions, packages, etc</td>
+<td>- Functions w/o arguments</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>- Values that can’t be changed with <strong><code>&lt;-</code></strong></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>- Packaged in a <code>server</code> function</td>
+</tr>
+</tbody>
+</table>
+<p>The Wizarding world can reach out to the Muggle world, but not the other way around.</p>
+</section></section>
+<section><section id="project-0-our-first-app" class="title-slide slide level1"><h1>Project 0: Our First App</h1></section><section id="the-main-file-app.r" class="slide level2">
+<h2>The main file, <strong><code>app.R</code></strong></h2>
+<p>This file contains all the components of the app: the user interface and reactive logic.</p>
+<p>The UI and reactive logic can be in separate files that are sourced in <code>app.R</code> or all put in the same file.</p>
+</section><section id="shinyapp" class="slide level2">
+<h2><code>shinyApp()</code></h2>
+<p><code>app.R</code> is just a regular R script</p>
+<ul>
+<li>Adding the call to <code>shinyApp()</code> at the end of the script changes the “Run” button to “Run App”</li>
+</ul>
+</section><section id="starting-in-the-muggle-world" class="slide level2">
+<h2>Starting in the Muggle World</h2>
+<p>Let’s start with <code>muggle.R</code> (our run-of-the-mill R code)</p>
+<ul>
+<li><p>We load the libraries we need</p></li>
+<li><p>We create a function <code>muggle_plot</code> that takes variable names from the <code>diamonds</code> dataset as inputs and generates a scatterplot</p></li>
+<li><p>Test it out if you want</p></li>
+</ul>
+</section><section id="user-interface" class="slide level2">
+<h2>User Interface</h2>
+<p>The function <code>tagList</code> takes HTML functions as inputs and creates a list of HTML components</p>
+<ul>
+<li><p>Try running the first line, <code>h2(&quot;A very basic Shiny app&quot;)</code> in the console</p></li>
+<li><p>Functions like <code>h2</code>, <code>p</code>, and <code>actionButton</code> are wrappers for HTML code (essentially strings)</p></li>
+<li><p>The first argument in <code>actionButton</code>, <code>plotOutput</code>, and <code>textOutput</code> are IDs. We will use these IDs in the next part</p></li>
+</ul>
+</section><section id="reactive-logic" class="slide level2">
+<h2>Reactive Logic</h2>
+<p>We will connect the UI to the Muggle code with <strong>reactive logic</strong></p>
+<ul>
+<li><p>We are assigning a function to <code>reactive_logic</code> with three arguments: <code>input</code>, <code>output</code>, and <code>session</code>. The arguments are always the same, but <code>reactive_logic</code> is usually called <code>server</code>.</p></li>
+<li><p>Functions <code>renderPlot</code> and <code>renderText</code> are assigned to <code>output$IDname</code>. They correspond to the UI functions <code>plotOutput</code> and <code>textOutput</code></p></li>
+<li><p>Try running <code>renderText(&quot;Hello World!&quot;)</code></p></li>
+</ul>
+</section><section id="invoking-the-app" class="slide level2">
+<h2>Invoking the App</h2>
+<p><code>shinyApp(user_interface, reactive_logic)</code></p>
+</section><section id="your-turn-modify-the-app" class="slide level2">
+<h2>Your Turn: Modify the App</h2>
+<ol type="1">
+<li><p>Hide the button message until the button has been clicked 3 times.</p></li>
+<li><p>Add <code>selectInput</code> dropdown menus for the X and Y variables.</p></li>
+<li><p>(Superstar) Connect the <code>selectInput</code> menus to the plot (we haven’t covered this yet)</p></li>
+</ol>
+</section><section id="deploying-the-app" class="slide level2">
+<h2>Deploying the App</h2>
+<ol type="1">
+<li><p>Put all the files your app needs in a single directory (the name of the directory will be the name of the app)</p></li>
+<li><p>Make sure there is a file called <code>app.R</code> with the call to <code>shinyApp()</code></p></li>
+<li><p><code>rsconnect::deployApp(&quot;/path/to/app/directory&quot;)</code></p></li>
+</ol>
+</section></section>
+<section><section id="project-1-user-interface" class="title-slide slide level1"><h1>Project 1: User Interface</h1></section><section id="building-a-user-interface" class="slide level2">
+<h2>Building a User Interface</h2>
+<ol type="1">
+<li>Instantiating input and output widgets</li>
+<li>Frameworks and layouts</li>
+<li>Organizing widgets within the framework</li>
+</ol>
+</section><section id="widgets" class="slide level2">
+<h2>Widgets</h2>
+<ul>
+<li><p>Open <code>project1-ui</code> and take a look at <code>UI_starting.R</code> and <code>Knight_bus.R</code>.</p></li>
+<li><p>Run <code>app.R</code>.</p></li>
+<li><p>We only see inputs because nothing is connected to the outputs.</p></li>
+</ul>
+</section><section id="the-shiny-widget-gallery" class="slide level2">
+<h2>The Shiny Widget Gallery</h2>
+<h3 id="input-widgets">Input Widgets</h3>
+<p><a href="https://shiny.rstudio.com/gallery/widget-gallery.html" class="uri">https://shiny.rstudio.com/gallery/widget-gallery.html</a></p>
+</section><section id="output-widgets" class="slide level2">
+<h2>Output Widgets</h2>
+<p><img data-src="images/output-widgets.png" /></p>
+</section><section id="playing-with-widgets" class="slide level2">
+<h2>Playing with Widgets</h2>
+<p>Add some input widgets to <code>UI_starting.R</code></p>
+<ul>
+<li><p>actionLink</p></li>
+<li><p>checkboxInput</p></li>
+<li><p>radioButtons</p></li>
+<li><p>textInput</p></li>
+</ul>
+<p>Make sure the app still works with your changes!</p>
+</section><section id="connecting-inputs-to-outputs" class="slide level2">
+<h2>Connecting Inputs to Outputs</h2>
+<p>Add some reactive logic to <code>Knight_bus.R</code> so that the text output <code>felix</code> (<code>output$felix</code>) displays the selected choice from <code>annie</code> (<code>input$annie</code>)</p>
+</section><section id="frameworks-and-layouts" class="slide level2">
+<h2>Frameworks and Layouts</h2>
+<ul>
+<li><p>Replace <code>UI_starting.R</code> with <code>UI_fluid_page.R</code></p></li>
+<li><p>Run the app</p></li>
+<li><p>Pretty ugly, right? Now try replacing <code>tagList</code> with <code>fluidPage</code></p></li>
+</ul>
+</section><section id="fluidpage" class="slide level2">
+<h2><code>fluidPage()</code></h2>
+<p>A fluid page layout consists of rows which in turn contain columns</p>
+<ul>
+<li><p>Rows ensure that items appear on the same line as long as the browser is wide enough (hence the fluid)</p></li>
+<li><p>Columns define how much horizontal space elements should occupy. Horizontal space is defined by a 12-unit wide grid</p></li>
+<li><p>Adds some Bootstrap styling (framework for designing websites–developed by Twitter)</p></li>
+</ul>
+</section><section id="fluidrow-and-column" class="slide level2">
+<h2><code>fluidRow()</code> and <code>column()</code></h2>
+<p>Changing <code>tagList</code> to <code>fluidPage</code> didn’t do much</p>
+<p>Let’s add some <code>fluidRows()</code> and <code>column()</code> functions to create this:</p>
+<p><img data-src="images/fluid-wide.png" /></p>
+</section><section id="fluidpage-is-responsive" class="slide level2">
+<h2><code>fluidPage()</code> is responsive</h2>
+<p>Try adjusting the size of your browser window</p>
+</section><section id="other-layouts" class="slide level2">
+<h2>Other Layouts</h2>
+<ul>
+<li><p><code>tabsetPanel()</code> + <code>tabPanel()</code></p></li>
+<li><p><code>sidebarLayout()</code> + <code>sidebarPanel()</code>/<code>mainPanel()</code></p></li>
+<li><p><code>splitLayout()</code></p></li>
+<li><p><code>wellPanel()</code></p></li>
+<li><p><code>navbarPage()</code></p></li>
+<li><p><code>navlistPanel()</code></p></li>
+</ul>
+</section></section>
+<section><section id="project-2-reactives" class="title-slide slide level1"><h1>Project 2: Reactives</h1></section><section id="reactivity" class="slide level2">
+<h2>Reactivity</h2>
+<p>We’ve already seen some examples with our <code>render</code> functions, but what exactly is <strong>reactivity</strong>?</p>
+<p>Reactivity is a 2-step process</p>
+<ol type="1">
+<li><p><strong>Reactive values</strong> <em>notify</em> functions that use them when they become invalid</p></li>
+<li><p>Objects created by <strong>reactive functions</strong> <em>respond</em></p></li>
+</ol>
+</section><section id="reactivity-diagram" class="slide level2">
+<h2>Reactivity Diagram</h2>
+<p><img data-src="images/reactivity.png" /></p>
+</section><section id="project-2-pythagorean-theorem" class="slide level2">
+<h2>Project 2: Pythagorean Theorem</h2>
+<ul>
+<li><p>Run <code>pythagorean-1.R</code> and change the input values a few times.</p></li>
+<li><p>Stop the app</p></li>
+<li><p>Run <code>reactlogShow()</code> (may need to install first)</p></li>
+</ul>
+</section><section id="adding-an-expression-modularizing-reactions" class="slide level2">
+<h2>Adding an expression: modularizing reactions</h2>
+<ul>
+<li><p>Run <code>pythagorean-2.R</code> and change the input values.</p></li>
+<li><p>Stop the app</p></li>
+<li><p>Run <code>reactlogShow()</code></p></li>
+<li><p>Reactives are lazy and only update when they need to</p></li>
+</ul>
+</section><section id="reactives-vs.observers" class="slide level2">
+<h2>Reactives vs. observers</h2>
+<p><strong>Reactives</strong>: calculate or cache a value, meant to be used as a variable, has a result</p>
+<p><strong>Observers</strong>: runs some code when a dependency changes, doesn’t yield a result, isn’t used as input for other expressions, not assigned to a variable</p>
+</section></section>
+<section><section id="project-3-plotting-a-data-frame" class="title-slide slide level1"><h1>Project 3: Plotting a Data Frame</h1></section><section id="objectives" class="slide level2">
+<h2>Objectives</h2>
+<p>With this app, a user will be able to select a data frame from a list of choices, and then select a response and explanatory variable. The app will have 3 types of functionality:</p>
+<ol type="1">
+<li><p>Plot a scatterplot of the data frame (response vs explanatory)</p></li>
+<li><p>Show the head of the data frame</p></li>
+<li><p>Print out a regression report</p></li>
+</ol>
+</section><section id="step-1-re-organize-the-code" class="slide level2">
+<h2>Step 1: re-organize the code</h2>
+<p>Start with <code>app-0.R</code>. It’s a working app-see for yourself!</p>
+<p>Even though the app has very little functionality, the script is already crowded.</p>
+<ol type="1">
+<li><p>Pull out the UI and put it into a file <code>ui.R</code>. Do the same for <code>server</code>.</p></li>
+<li><p>Source these into <code>app-0.R</code>.</p></li>
+<li><p>Make sure the app still works!</p></li>
+</ol>
+</section><section id="step-2-tabify-the-app" class="slide level2">
+<h2>Step 2: Tabify the app</h2>
+<p>Having all the outputs on one page can be messy.</p>
+<ol type="1">
+<li><p>Put each output widget on its own tab with an informative label</p></li>
+<li><p>Put the input widgets in the same tab as the table display (head of data frame)</p></li>
+<li><p>Make sure the input widget/table display tab is displayed when you start the app</p></li>
+</ol>
+</section><section id="step-3-fill-in-choices-for-response-and-explanatory" class="slide level2">
+<h2>Step 3: Fill in choices for <code>response</code> and <code>explanatory</code></h2>
+<p>Write some reactive logic so that the appropriate choices appear for the <code>response</code> and <code>explanatory</code> input widgets</p>
+<p>Hint: use <code>updateSelectInput()</code>. The variable names will be returned by <code>names(Raw_data())</code>. Should you use a <code>eventReactive()</code> or <code>observeEvent()</code> to accomplish this?</p>
+</section><section id="step-4-display-the-data" class="slide level2">
+<h2>Step 4: Display the data</h2>
+<p>Write reactive logic to:</p>
+<ol type="1">
+<li><p>Display the head of the selected data frame in a table (only the response and explanatory variables)</p></li>
+<li><p>Plot response versus explanatory in a scatterplot</p></li>
+</ol>
+<p>You’ll be using the <code>render</code> functions to create the displays. Is there a way you can create a common object for that can be used by both of the <code>render</code> functions? Hint: use <code>reactive()</code></p>
+</section><section id="step-5-show-a-summary-of-the-model" class="slide level2">
+<h2>Step 5: Show a summary of the model</h2>
+<p>Display a summary of the linear model <code>response ~ explanatory</code>.</p>
+<p>Hints: - You can use <code>paste()</code> to construct the formula</p>
+<ul>
+<li>Try <code>renderPrint</code></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="MAIN_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="MAIN_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+        menu: {
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
+
+
+        chalkboard: {
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'MAIN_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'MAIN_files/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'MAIN_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+          { src: 'MAIN_files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,56 @@
+---
+output:
+  revealjs::revealjs_presentation:
+    self_contained: false
+    reveal_plugins: ["notes", "search", "chalkboard", "menu"]
+    
+---
+
+```{r child="page-definitions.Rmd"}
+```
+  
+# {data-background-image="./images/title-slide.jpg"}
+
+
+---
+
+# {data-background-image="./images/asking-for-help.jpg"}
+
+
+```{r child="additional-help.Rmd"}
+```
+
+# Computer Setup
+
+```{r child="computer-setup.Rmd"}
+```
+
+# Workshop Files
+
+```{r child="workshop-files.Rmd"}
+```
+
+# What is a Shiny app?
+
+```{r child="shiny-apps.Rmd"}
+```
+
+# Project 0: Our First App
+
+```{r child="project0-firstapp.Rmd"}
+```
+
+# Project 1: User Interface
+
+```{r child="project1-ui.Rmd"}
+```
+
+# Project 2: Reactives
+
+```{r child="project2-reactives.Rmd"}
+```
+
+# Project 3: Plotting a Data Frame
+
+```{r child="project3-data-frame.Rmd"}
+```

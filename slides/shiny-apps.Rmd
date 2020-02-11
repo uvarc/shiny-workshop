@@ -1,0 +1,36 @@
+## Shiny apps are just webpages
+
+Webpages are made up of 2 main components
+
+1. **HTML/CSS**: what your app looks like (the **form**)
+2. **JavaScript**: what your app does (the **function**)
+
+<br>
+
+The difference between Shiny apps and regular webpages:
+Shiny apps are powered by an R session
+
+## Creating a Shiny app
+
+1. Regular R stuff: writing code to manipulate and analyze data, visualize with graphs, etc...
+
+<br>
+
+2. Create a user interface
+
+3. Connect **1** to **2** with **reactive logic**
+
+
+## {data-background-image="./images/knight-bus.jpg"}
+
+
+## Shiny Bridges Two Worlds of R Programming
+
+| 1. **Muggle World**        | 2. **Wizarding World**    |
+|         ---                |           ---             |
+| - Regular R code           | - Reactives               |
+| - Functions, packages, etc | - Functions w/o arguments |
+|                            | - Values that can't be changed with **`<-`** |
+|                            | - Packaged in a `server` function |
+
+The Wizarding world can reach out to the Muggle world, but not the other way around.

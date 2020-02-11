@@ -1,0 +1,40 @@
+## Reactivity
+
+We've already seen some examples with our `render` functions, but what exactly is **reactivity**?
+
+Reactivity is a 2-step process
+
+1. **Reactive values** *notify* functions that use them when they become invalid
+
+2. Objects created by **reactive functions** *respond*
+
+## Reactivity Diagram
+
+![](./images/reactivity.png)
+
+## Project 2: Pythagorean Theorem
+
+- Run `pythagorean-1.R` and change the input values a few times.
+
+- Stop the app
+
+- Run `reactlogShow()` (may need to install first)
+
+
+## Adding an expression: modularizing reactions
+
+- Run `pythagorean-2.R` and change the input values.
+
+- Stop the app
+
+- Run `reactlogShow()`
+
+- Reactives are lazy and only update when they need to
+
+## Reactives vs. observers
+
+**Reactives**: calculate or cache a value, meant to be used as a variable, has a result
+
+**Observers**: runs some code when a dependency changes, doesn't yield a result, isn't used as input for other expressions, not assigned to a variable
+
+

@@ -1,0 +1,91 @@
+## Building a User Interface
+
+1. Instantiating input and output widgets
+2. Frameworks and layouts
+3. Organizing widgets within the framework
+
+## Widgets
+
+- Open `project1-ui` and take a look at `UI_starting.R` and `Knight_bus.R`.
+
+- Run `app.R`.
+
+- We only see inputs because nothing is connected to the outputs.
+
+## The Shiny Widget Gallery
+
+### Input Widgets
+
+https://shiny.rstudio.com/gallery/widget-gallery.html
+
+## Output Widgets
+
+![](./images/output-widgets.png)
+
+## Playing with Widgets
+
+Add some input widgets to `UI_starting.R`
+
+- actionLink
+
+- checkboxInput
+
+- radioButtons
+
+- textInput
+
+Make sure the app still works with your changes!
+
+## Connecting Inputs to Outputs
+
+Add some reactive logic to `Knight_bus.R` so that the text output `felix` (`output$felix`) displays the selected choice from `annie` (`input$annie`)
+
+## Frameworks and Layouts
+
+- Replace `UI_starting.R` with `UI_fluid_page.R`
+
+- Run the app
+
+- Pretty ugly, right? Now try replacing `tagList` with `fluidPage`
+
+## `fluidPage()`
+
+A fluid page layout consists of rows which in turn contain columns
+
+- Rows ensure that items appear on the same line as long as the browser is wide enough (hence the fluid)
+
+- Columns define how much horizontal space elements should occupy. Horizontal space is defined by a 12-unit wide grid
+
+- Adds some Bootstrap styling (framework for designing websites--developed by Twitter)
+
+## `fluidRow()` and `column()`
+
+
+Changing `tagList` to `fluidPage` didn't do much
+
+Let's add some `fluidRows()` and `column()` functions to create this:
+
+![](./images/fluid-wide.png)
+
+## `fluidPage()` is responsive
+
+Try adjusting the size of your browser window
+
+## Other Layouts
+
+- `tabsetPanel()` + `tabPanel()`
+
+- `sidebarLayout()` + `sidebarPanel()`/`mainPanel()`
+
+- `splitLayout()`
+
+- `wellPanel()`
+
+- `navbarPage()`
+
+- `navlistPanel()`
+
+
+
+
+

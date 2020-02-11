@@ -1,0 +1,39 @@
+## File Organization
+
+- Project Directory
+
+  - **`slides/`**: contains all the RMarkdown files/slides for this workshop
+    - Knit `MAIN.Rmd` to see the main slideshow
+    - Each section is a separate RMarkdown file
+
+  - **`projects/`**: contains all the code we'll be working with today
+    - Each app will live in a separate directory
+
+  - **`sandbox/`**: place to put code snippets or quick demos
+  
+## Creating a new Shiny project
+
+How do you create a new blank Shiny app? Create a new Shiny project in `sandbox`.
+
+<br>
+
+Poke around RStudio and try on your own, or peer over a neighbor's shoulder.
+
+## Old Faithful
+
+Using **New Project** -> **Shiny Web App** creates a living, breathing Shiny App
+
+![](images/old-faithful.png)
+
+## A better way to do it
+
+1. Open a new R Script file.
+2. Start typing `shinyapp` and press **Tab** to autocomplete.
+  - This will expand into a "snippet" of code--the skeleton of a Shiny App.
+3. Save the file in `Sandbox` and run the app.
+
+<br>
+
+It's still a working Shiny app--it's just doesn't do anything. Starting from the snippet is less error-prone than creating a new project and deleting the guts.
+
+Stop an app by clicking the STOP button in the console.

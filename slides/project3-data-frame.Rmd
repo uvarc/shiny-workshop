@@ -1,0 +1,58 @@
+## Objectives
+
+With this app, a user will be able to select a data frame from a list of choices, and then select a response and explanatory variable. The app will have 3 types of functionality: 
+
+1. Plot a scatterplot of the data frame (response vs explanatory)
+
+2. Show the head of the data frame
+
+3. Print out a regression report
+
+## Step 1: re-organize the code
+
+Start with `app-0.R`. It's a working app-see for yourself!
+
+Even though the app has very little functionality, the script is already crowded.
+
+1. Pull out the UI and put it into a file `ui.R`. Do the same for `server`.
+
+2. Source these into `app-0.R`.
+
+3. Make sure the app still works!
+
+## Step 2: Tabify the app
+
+Having all the outputs on one page can be messy.
+
+1. Put each output widget on its own tab with an informative label
+
+2. Put the input widgets in the same tab as the table display (head of data frame)
+
+3. Make sure the input widget/table display tab is displayed when you start the app
+
+## Step 3: Fill in choices for `response` and `explanatory`
+
+Write some reactive logic so that the appropriate choices appear for the `response` and `explanatory` input widgets
+
+Hint: use `updateSelectInput()`. The variable names will be returned by `names(Raw_data())`. Should you use a `eventReactive()` or `observeEvent()` to accomplish this?
+
+## Step 4: Display the data
+
+Write reactive logic to:
+
+1. Display the head of the selected data frame in a table (only the response and explanatory variables)
+
+2. Plot response versus explanatory in a scatterplot
+
+You'll be using the `render` functions to create the displays. Is there a way you can create a common object for that can be used by both of the `render` functions? Hint: use `reactive()`
+
+## Step 5: Show a summary of the model
+
+Display a summary of the linear model `response ~ explanatory`.
+
+Hints:
+- You can use `paste()` to construct the formula
+
+- Try `renderPrint`
+
+
