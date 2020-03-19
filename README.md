@@ -9,3 +9,5 @@ Here are additional materials for learning about Shiny:
 2. Reactivity: https://shiny.rstudio.com/articles/reactivity-overview.html
 
 3. Shiny Cheat Sheet: https://shiny.rstudio.com/images/shiny-cheatsheet.pdf
+
+Put your questions and comments here! https://bit.ly/2xJHqqn
