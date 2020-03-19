@@ -48,6 +48,14 @@ The Knight Bus is our connection between regular R code (Muggle World) and the w
 * Conductors have both inward and outward connections
 
 
+## Reactives vs. observers
+
+**Reactives**: calculate or cache a value, meant to be used as a variable, has a result
+
+**Observers**: runs some code when a dependency changes, doesn't yield a result, isn't used as input for other expressions, not assigned to a variable (e.g., updating a menu based on a selection)
+
+
+
 ## Reactivity Diagram
 
 ![](./images/reactivity.png)
@@ -71,10 +79,5 @@ The Knight Bus is our connection between regular R code (Muggle World) and the w
 
 - Reactives are lazy and only update when they need to
 
-## Reactives vs. observers
-
-**Reactives**: calculate or cache a value, meant to be used as a variable, has a result
-
-**Observers**: runs some code when a dependency changes, doesn't yield a result, isn't used as input for other expressions, not assigned to a variable
 
 
