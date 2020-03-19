@@ -52,7 +52,7 @@ The Knight Bus is our connection between regular R code (Muggle World) and the w
 
 **Reactives**: calculate or cache a value, meant to be used as a variable, has a result
 
-**Observers**: runs some code when a dependency changes, doesn't yield a result, isn't used as input for other expressions, not assigned to a variable (e.g., updating a menu based on a selection)
+**Observers**: for side effects--runs some code when a dependency changes, doesn't yield a result, isn't used as input for other expressions, not assigned to a variable (e.g., updating a menu based on a selection)
 
 
 
