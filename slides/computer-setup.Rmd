@@ -28,7 +28,7 @@ Your development server is no longer serving your app.
 
 <br>
 
-**Option 2**: Create a New R Project
+**Option 2**: Create a New R Project (need Git installed for this option)
 
 1. **File** > **New Project** > **Version Control** > **Git**
 2. Repository URL: https://github.com/uvarc/shiny-workshop

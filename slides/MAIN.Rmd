@@ -14,7 +14,7 @@ output:
 
 ---
 
-# {data-background-image="./images/asking-for-help.jpg"}
+# {data-background-image="./images/asking-for-help-zoom.jpg"}
 
 
 ```{r child="additional-help.Rmd"}

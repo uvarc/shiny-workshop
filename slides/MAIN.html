@@ -490,28 +490,28 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section><section id="section" class="title-slide slide level1" data-background-image="./images/title-slide.jpg"><h1></h1></section><section class="slide level2">
 
 </section></section>
-<section><section id="section-1" class="title-slide slide level1" data-background-image="./images/asking-for-help.jpg"><h1></h1></section><section id="additional-help" class="slide level2">
+<section><section id="section-1" class="title-slide slide level1" data-background-image="./images/asking-for-help-zoom.jpg"><h1></h1></section><section id="additional-help" class="slide level2">
 <h2>Additional Help</h2>
 <p><a href="mailto:hpc-support@virginia.edu" class="email">hpc-support@virginia.edu</a></p>
 <table>
 <thead>
 <tr class="header">
 <th>Office Hours</th>
-<th>Location</th>
+<th>Zoom Link</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Tuesday 3-5pm</td>
-<td>PLSB 430</td>
+<td><a href="https://virginia.zoom.us/j/304271094" class="uri">https://virginia.zoom.us/j/304271094</a></td>
 </tr>
 <tr class="even">
 <td>Wednesday 3-5pm</td>
-<td>Brown Library “Worst Cat” Table</td>
+<td><a href="https://virginia.zoom.us/s/812332138" class="uri">https://virginia.zoom.us/s/812332138</a></td>
 </tr>
 <tr class="odd">
 <td>Thursday 10am-12pm</td>
-<td>Health Sciences Library Mill Room</td>
+<td><a href="https://virginia.zoom.us/j/723009972" class="uri">https://virginia.zoom.us/j/723009972</a></td>
 </tr>
 </tbody>
 </table>
@@ -540,7 +540,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li><code>git clone https://github.com/uvarc/shiny-workshop</code></li>
 </ol>
 <p><br></p>
-<p><strong>Option 2</strong>: Create a New R Project</p>
+<p><strong>Option 2</strong>: Create a New R Project (need Git installed for this option)</p>
 <ol type="1">
 <li><strong>File</strong> &gt; <strong>New Project</strong> &gt; <strong>Version Control</strong> &gt; <strong>Git</strong></li>
 <li>Repository URL: <a href="https://github.com/uvarc/shiny-workshop" class="uri">https://github.com/uvarc/shiny-workshop</a></li>
@@ -775,6 +775,66 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li><p><strong>Reactive values</strong> <em>notify</em> functions that use them when they become invalid</p></li>
 <li><p>Objects created by <strong>reactive functions</strong> <em>respond</em></p></li>
 </ol>
+</section><section id="some-reactive-functions" class="slide level2">
+<h2>Some Reactive Functions</h2>
+<ul>
+<li>render*() functions</li>
+<li>reactive()</li>
+<li>reactiveValues()</li>
+<li>eventReactive()</li>
+<li>observe()</li>
+<li>observeEvent()</li>
+</ul>
+</section><section id="more-harry-potter-comparisons" class="slide level2">
+<h2>More Harry Potter Comparisons</h2>
+<p>The Knight Bus is our connection between regular R code (Muggle World) and the world of reactives (Wizarding World)</p>
+<p><code>knight_bus &lt;- function(input, output, session) {</code> reactive code here! <code>}</code></p>
+</section><section id="types-of-kb-passengers" class="slide level2">
+<h2>3 Types of KB Passengers</h2>
+<table>
+<thead>
+<tr class="header">
+<th>inputs</th>
+<th>conductors</th>
+<th>observers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img data-src="images/input.png" /></td>
+<td><img data-src="images/conductor.png" /></td>
+<td><img data-src="images/observer.png" /></td>
+</tr>
+<tr class="even">
+<td><code>actionButton()</code></td>
+<td><code>reactive()</code></td>
+<td><code>observe()</code></td>
+</tr>
+<tr class="odd">
+<td><code>selectInput()</code></td>
+<td><code>eventReactive()</code></td>
+<td><code>observeEvent()</code></td>
+</tr>
+<tr class="even">
+<td><code>reactiveValues()</code></td>
+<td><code>renderText()</code></td>
+<td><code>textOutput()</code></td>
+</tr>
+</tbody>
+</table>
+</section><section id="reactives" class="slide level2">
+<h2>Reactives</h2>
+<p><strong><em>Reactives have 2 kinds of states</em></strong></p>
+<ol type="1">
+<li><strong>Their value</strong>, e.g. numerical/text value, plot, image</li>
+<li><strong>Their validity</strong>–validated, invalidated</li>
+</ol>
+<p><strong><em>Reactives have connections</em></strong></p>
+<ul>
+<li>Inputs have outward connections</li>
+<li>Observers have inward connections</li>
+<li>Conductors have both inward and outward connections</li>
+</ul>
 </section><section id="reactivity-diagram" class="slide level2">
 <h2>Reactivity Diagram</h2>
 <p><img data-src="images/reactivity.png" /></p>

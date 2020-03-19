@@ -8,6 +8,46 @@ Reactivity is a 2-step process
 
 2. Objects created by **reactive functions** *respond*
 
+## Some Reactive Functions
+
+* render*() functions
+* reactive()
+* reactiveValues()
+* eventReactive()
+* observe()
+* observeEvent()
+
+## More Harry Potter Comparisons
+
+The Knight Bus is our connection between regular R code (Muggle World) and the world of reactives (Wizarding World)
+
+`knight_bus <- function(input, output, session) {`
+    reactive code here!
+`}`
+
+## 3 Types of KB Passengers
+
+| inputs | conductors | observers |
+|  ---   |    ---     |    ---    |
+| ![](./images/input.png) | ![](./images/conductor.png) | ![](./images/observer.png) |
+| `actionButton()` | `reactive()` | `observe()` |
+| `selectInput()`  | `eventReactive()` | `observeEvent()` |
+| `reactiveValues()`            | `renderText()` | `textOutput()` |
+
+## Reactives
+
+***Reactives have 2 kinds of states***
+
+1. **Their value**, e.g. numerical/text value, plot, image
+2. **Their validity**--validated, invalidated
+
+***Reactives have connections***
+
+* Inputs have outward connections
+* Observers have inward connections
+* Conductors have both inward and outward connections
+
+
 ## Reactivity Diagram
 
 ![](./images/reactivity.png)
