@@ -17,14 +17,14 @@ Once you're ready to share your app, it's time to move it to a deployment server
 
 ![](images/deployment-server.jpg)
 
-Your development server is no longer serving your app.
+Once deployed on the deployment server, your development server is no longer serving your app.
 
 ## Set up your development server
 
-**Option 1**: Clone the GitHub Repository
+**Option 1**: Clone or Download the GitHub Repository
 
-1. Open the terminal.
-2. `git clone https://github.com/uvarc/shiny-workshop`
+1. Run `git clone https://github.com/uvarc/shiny-workshop` in the terminal
+2. -OR- Go to https://github.com/uvarc/shiny-workshop and click green "Code" button, then click "Download ZIP"
 
 <br>
 
@@ -44,6 +44,6 @@ Can host 5 apps on shinyapps.io for free.
 
 <br>
 
-You can also host your apps on UVA servers (beta): 
+You can also host your apps on UVA servers: 
 https://www.rc.virginia.edu/userinfo/microservices/
 

@@ -2,28 +2,32 @@
 
 We've already seen some examples with our `render` functions, but what exactly is **reactivity**?
 
-Reactivity is a 2-step process
-
-1. **Reactive values** *notify* functions that use them when they become invalid
-
-2. Objects created by **reactive functions** *respond*
-
-## Some Reactive Functions
-
-* render*() functions
-* reactive()
-* reactiveValues()
-* eventReactive()
-* observe()
-* observeEvent()
 
 ## More Harry Potter Comparisons
 
-The Knight Bus is our connection between regular R code (Muggle World) and the world of reactives (Wizarding World)
+Remember, the Knight Bus is our connection between regular R code (Muggle World) and the world of reactives (Wizarding World)
 
 `knight_bus <- function(input, output, session) {`
     reactive code here!
 `}`
+
+
+## Reactives: An Example
+
+```
+server <- function(input, output) {
+    output$distPlot <- renderPlot({
+        hist(rnorm(input$obs))
+    })
+}
+```
+
+In this example, input\$obs is a reactive source, and output\$distPlot is a reactive endpoint.
+
+- Clicking or typing into input widgets will set some sort of value, or **reactive source**.
+
+- A **reactive endpoint** is an object that appears in the app, like a plot, text, or values. Reactive endpoints re-execute when their reactive inputs change.
+
 
 ## 3 Types of KB Passengers
 
@@ -34,42 +38,61 @@ The Knight Bus is our connection between regular R code (Muggle World) and the w
 | `selectInput()`  | `eventReactive()` | `observeEvent()` |
 | `reactiveValues()`            | `renderText()` | `textOutput()` |
 
-## Reactives
+- Inputs are reactive sources. Reactive endpoints are called observers because they observe changes to inputs.
+
+- Conductors act like both sources and endpoints. They depend on inputs, but they also provide inputs to other reactives.
+
+## Reactives have connections
+
+* Inputs have outward connections
+* Observers have inward connections
+* Conductors have both inward and outward connections
+
+## Reactive States
 
 ***Reactives have 2 kinds of states***
 
 1. **Their value**, e.g. numerical/text value, plot, image
 2. **Their validity**--validated, invalidated
 
-***Reactives have connections***
+<br>
 
-* Inputs have outward connections
-* Observers have inward connections
-* Conductors have both inward and outward connections
-
-
-## Reactives vs. observers
-
-**Reactives**: calculate or cache a value, meant to be used as a variable, has a result
-
-**Observers**: for side effects--runs some code when a dependency changes, doesn't yield a result, isn't used as input for other expressions, not assigned to a variable (e.g., updating a menu based on a selection)
-
-
-
-## Reactivity Diagram
-
-![](./images/reactivity.png)
+- Reactives are invalidated when their inputs change value. They become valid again when they recalculate or re-execute based on their input's new value.
 
 ## Project 2: Pythagorean Theorem
+
+This script calculates the hypotenuse of a right triangle using 
+```
+output$C <- renderText({
+    sqrt(input$A^2 + input$B^2)
+  })
+```
 
 - Run `pythagorean-1.R` and change the input values a few times.
 
 - Stop the app
 
-- Run `reactlogShow()` (may need to install first)
+- Run `reactlogShow()` in the console (may need to install first)
 
+A log will open in your browser
+
+## reactlogShow()
+
+- Click the forward arrow in the log window
+
+- When input\$A or input\$B's value changed, it became invalidated.
+
+- This then invalidates output$C
+
+- output$C becomes validated once it recalculates
 
 ## Adding an expression: modularizing reactions
+
+This script still calculates the hypotenuse but splits the calculation into two parts
+
+1. `C2 <- reactive(input$A^2 + input$B^2, label = "C2")`
+
+2. `output$C <- renderText(sqrt(C2()))`
 
 - Run `pythagorean-2.R` and change the input values.
 
@@ -78,6 +101,19 @@ The Knight Bus is our connection between regular R code (Muggle World) and the w
 - Run `reactlogShow()`
 
 - Reactives are lazy and only update when they need to
+
+
+## Reactivity Diagram
+
+![](./images/reactivity.png)
+
+## Reactives vs. observers
+
+**Reactives**: calculate or cache a value, meant to be used as a variable, has a result
+
+**Observers**: for side effects--runs some code when a dependency changes, doesn't yield a result, isn't used as input for other expressions, not assigned to a variable (e.g., updating a menu based on a selection)
+
+
 
 
 

@@ -1,22 +1,36 @@
 ## Building a User Interface
 
+Building a UI is comprised of three parts:
+
 1. Instantiating input and output widgets
 2. Frameworks and layouts
 3. Organizing widgets within the framework
 
 ## Widgets
 
-- Open `project1-ui` and take a look at `UI_starting.R` and `Knight_bus.R`.
+- Go to `projects/project1-ui` and take a look at `UI_starting.R` and `Knight_bus.R`.
 
 - Run `app.R`.
 
-- We only see inputs because nothing is connected to the outputs.
+- **Widgets** are the different buttons and fields we see on a webpage. 
+
+- We only see the inputs from `UI_starting.R` because nothing is connected to the outputs.
 
 ## The Shiny Widget Gallery
 
 ### Input Widgets
 
+- You can try out and play with Shiny input widgets on RStudio's website.
+
+- The website shows you how the values change when you modify the input widgets. The site will also show you the code you need to include the widget in your own app.
+
 https://shiny.rstudio.com/gallery/widget-gallery.html
+
+## Output Widgets
+
+- Output widgets are similar to input widgets. However, output widgets require a `render` function to be visible in the app.
+
+- Each output widget has its own corresponding `render` function.
 
 ## Output Widgets
 
@@ -42,7 +56,7 @@ Add some reactive logic to `Knight_bus.R` so that the text output `felix` (`outp
 
 ## Frameworks and Layouts
 
-- Replace `UI_starting.R` with `UI_fluid_page.R`
+- Replace `UI_starting.R` with `UI_fluid_page.R` in the `app.R`.
 
 - Run the app
 
@@ -66,12 +80,19 @@ Changing `tagList` to `fluidPage` didn't do much
 Let's add some `fluidRows()` and `column()` functions to create this:
 
 ![](./images/fluid-wide.png)
+The solution is in `UI_language_soln.R`
 
 ## `fluidPage()` is responsive
 
-Try adjusting the size of your browser window
+- Try adjusting the size of your browser window.
+
+- The text adjusts so that it all fits within a single window--no need to scroll left and right!
 
 ## Other Layouts
+
+Check out the Shiny cheatsheet to see other types of layouts
+
+https://shiny.rstudio.com/images/shiny-cheatsheet.pdf
 
 - `tabsetPanel()` + `tabPanel()`
 

@@ -11,20 +11,23 @@ The difference between Shiny apps and regular webpages:
 Shiny apps are powered by an R session
 
 ## Creating a Shiny app
+To create a Shiny app, we need:
 
 1. Regular R stuff: writing code to manipulate and analyze data, visualize with graphs, etc...
 
 <br>
 
-2. Create a user interface
+2. To create a user interface
 
-3. Connect **1** to **2** with **reactive logic**
+3. To connect **1** to **2** with **reactive logic**
 
 
 ## {data-background-image="./images/knight-bus.jpg"}
 
 
 ## Shiny Bridges Two Worlds of R Programming
+
+In Harry Potter, the Knight Bus connected the non-magical, or "Muggle", world to the magical Wizarding World. Similarly, Shiny connects regular R code to the magical world of "reactives" (we will talk more about these later).
 
 | 1. **Muggle World**        | 2. **Wizarding World**    |
 |         ---                |           ---             |

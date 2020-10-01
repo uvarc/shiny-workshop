@@ -487,10 +487,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
   }
 </style>
 </section>
-<section><section id="section" class="title-slide slide level1" data-background-image="./images/title-slide.jpg"><h1></h1></section><section class="slide level2">
-
-</section></section>
-<section><section id="section-1" class="title-slide slide level1" data-background-image="./images/asking-for-help-zoom.jpg"><h1></h1></section><section id="additional-help" class="slide level2">
+<section><section id="section" class="title-slide slide level1" data-background-image="./images/title-slide.jpg"><h1></h1></section><section id="additional-help" class="slide level2">
 <h2>Additional Help</h2>
 <p><a href="mailto:hpc-support@virginia.edu" class="email">hpc-support@virginia.edu</a></p>
 <table>
@@ -531,13 +528,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2>Deployment Server</h2>
 <p>Once you’re ready to share your app, it’s time to move it to a deployment server (deploy your app).</p>
 <p><img data-src="images/deployment-server.jpg" /></p>
-<p>Your development server is no longer serving your app.</p>
+<p>Once deployed on the deployment server, your development server is no longer serving your app.</p>
 </section><section id="set-up-your-development-server" class="slide level2">
 <h2>Set up your development server</h2>
-<p><strong>Option 1</strong>: Clone the GitHub Repository</p>
+<p><strong>Option 1</strong>: Clone or Download the GitHub Repository</p>
 <ol type="1">
-<li>Open the terminal.</li>
-<li><code>git clone https://github.com/uvarc/shiny-workshop</code></li>
+<li>Run <code>git clone https://github.com/uvarc/shiny-workshop</code> in the terminal</li>
+<li>-OR- Go to <a href="https://github.com/uvarc/shiny-workshop" class="uri">https://github.com/uvarc/shiny-workshop</a> and click green “Code” button, then click “Download ZIP”</li>
 </ol>
 <p><br></p>
 <p><strong>Option 2</strong>: Create a New R Project (need Git installed for this option)</p>
@@ -552,7 +549,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p>Create a free account on shinyapps.io.</p>
 <p>Can host 5 apps on shinyapps.io for free.</p>
 <p><br></p>
-<p>You can also host your apps on UVA servers (beta): <a href="https://www.rc.virginia.edu/userinfo/microservices/" class="uri">https://www.rc.virginia.edu/userinfo/microservices/</a></p>
+<p>You can also host your apps on UVA servers: <a href="https://www.rc.virginia.edu/userinfo/microservices/" class="uri">https://www.rc.virginia.edu/userinfo/microservices/</a></p>
 </section></section>
 <section><section id="workshop-files" class="title-slide slide level1"><h1>Workshop Files</h1></section><section id="file-organization" class="slide level2">
 <h2>File Organization</h2>
@@ -562,7 +559,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li><strong><code>slides/</code></strong>: contains all the RMarkdown files/slides for this workshop
 <ul>
 <li>Knit <code>MAIN.Rmd</code> to see the main slideshow</li>
-<li>Each section is a separate RMarkdown file</li>
+<li>Each section is a separate RMarkdown file (feel free to take notes in these!)</li>
 </ul></li>
 <li><strong><code>projects/</code></strong>: contains all the code we’ll be working with today
 <ul>
@@ -575,7 +572,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2>Creating a new Shiny project</h2>
 <p>How do you create a new blank Shiny app? Create a new Shiny project in <code>sandbox</code>.</p>
 <p><br></p>
-<p>Poke around RStudio and try on your own, or peer over a neighbor’s shoulder.</p>
+<p>Poke around RStudio and try on your own!</p>
 </section><section id="old-faithful" class="slide level2">
 <h2>Old Faithful</h2>
 <p>Using <strong>New Project</strong> -&gt; <strong>Shiny Web App</strong> creates a living, breathing Shiny App</p>
@@ -607,18 +604,20 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p>The difference between Shiny apps and regular webpages: Shiny apps are powered by an R session</p>
 </section><section id="creating-a-shiny-app" class="slide level2">
 <h2>Creating a Shiny app</h2>
+<p>To create a Shiny app, we need:</p>
 <ol type="1">
 <li>Regular R stuff: writing code to manipulate and analyze data, visualize with graphs, etc…</li>
 </ol>
 <p><br></p>
 <ol start="2" type="1">
-<li><p>Create a user interface</p></li>
-<li><p>Connect <strong>1</strong> to <strong>2</strong> with <strong>reactive logic</strong></p></li>
+<li><p>To create a user interface</p></li>
+<li><p>To connect <strong>1</strong> to <strong>2</strong> with <strong>reactive logic</strong></p></li>
 </ol>
-</section><section id="section-2" class="slide level2" data-background-image="./images/knight-bus.jpg">
+</section><section id="section-1" class="slide level2" data-background-image="./images/knight-bus.jpg">
 <h2></h2>
 </section><section id="shiny-bridges-two-worlds-of-r-programming" class="slide level2">
 <h2>Shiny Bridges Two Worlds of R Programming</h2>
+<p>In Harry Potter, the Knight Bus connected the non-magical, or “Muggle”, world to the magical Wizarding World. Similarly, Shiny connects regular R code to the magical world of “reactives” (we will talk more about these later).</p>
 <table>
 <thead>
 <tr class="header">
@@ -649,8 +648,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section></section>
 <section><section id="project-0-our-first-app" class="title-slide slide level1"><h1>Project 0: Our First App</h1></section><section id="the-main-file-app.r" class="slide level2">
 <h2>The main file, <strong><code>app.R</code></strong></h2>
-<p>This file contains all the components of the app: the user interface and reactive logic.</p>
-<p>The UI and reactive logic can be in separate files that are sourced in <code>app.R</code> or all put in the same file.</p>
+<p>Go to the <strong>projects</strong> -&gt; <strong>project0-first-app</strong> and open <strong>app.R</strong>.</p>
+<ul>
+<li><p>This file contains all the components of the app: the user interface and reactive logic.</p></li>
+<li><p>The UI and reactive logic can be written in separate .R files that are sourced in <code>app.R</code> or all put in the same file.</p></li>
+<li><p>In this case the UI is in <code>user_interface.R</code> and the reactive logic is in <code>reactive_logic.R</code>.</p></li>
+</ul>
 </section><section id="shinyapp" class="slide level2">
 <h2><code>shinyApp()</code></h2>
 <p><code>app.R</code> is just a regular R script</p>
@@ -663,29 +666,32 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li><p>We load the libraries we need</p></li>
 <li><p>We create a function <code>muggle_plot</code> that takes variable names from the <code>diamonds</code> dataset as inputs and generates a scatterplot</p></li>
-<li><p>Test it out if you want</p></li>
+<li><p>Test it out if you want by uncommenting and running the last line of the script</p></li>
 </ul>
 </section><section id="user-interface" class="slide level2">
 <h2>User Interface</h2>
-<p>The function <code>tagList</code> takes HTML functions as inputs and creates a list of HTML components</p>
+<p>Open <code>user_interface.R</code></p>
 <ul>
-<li><p>Try running the first line, <code>h2(&quot;A very basic Shiny app&quot;)</code> in the console</p></li>
+<li><p>The function <code>tagList</code> takes HTML functions as inputs and creates a list of HTML components</p></li>
+<li><p>Try running the first line, <code>h2("A very basic Shiny app")</code> in the console (make sure you have <code>shiny</code> loaded)</p></li>
 <li><p>Functions like <code>h2</code>, <code>p</code>, and <code>actionButton</code> are wrappers for HTML code (essentially strings)</p></li>
 <li><p>The first argument in <code>actionButton</code>, <code>plotOutput</code>, and <code>textOutput</code> are IDs. We will use these IDs in the next part</p></li>
 </ul>
 </section><section id="reactive-logic" class="slide level2">
 <h2>Reactive Logic</h2>
-<p>We will connect the UI to the Muggle code with <strong>reactive logic</strong></p>
+<p>Open <code>reactive_logic.R</code></p>
 <ul>
+<li><p>We will connect the UI to the Muggle code with <strong>reactive logic</strong></p></li>
 <li><p>We are assigning a function to <code>reactive_logic</code> with three arguments: <code>input</code>, <code>output</code>, and <code>session</code>. The arguments are always the same, but <code>reactive_logic</code> is usually called <code>server</code>.</p></li>
 <li><p>Functions <code>renderPlot</code> and <code>renderText</code> are assigned to <code>output$IDname</code>. They correspond to the UI functions <code>plotOutput</code> and <code>textOutput</code></p></li>
-<li><p>Try running <code>renderText(&quot;Hello World!&quot;)</code></p></li>
 </ul>
 </section><section id="invoking-the-app" class="slide level2">
 <h2>Invoking the App</h2>
 <p><code>shinyApp(user_interface, reactive_logic)</code></p>
+<p>To run our app, we use the command <code>shinyApp</code>. The first argument is the UI, and the second argument is our reactive logic.</p>
 </section><section id="your-turn-modify-the-app" class="slide level2">
 <h2>Your Turn: Modify the App</h2>
+<p>Try the following on your own!</p>
 <ol type="1">
 <li><p>Hide the button message until the button has been clicked 3 times.</p></li>
 <li><p>Add <code>selectInput</code> dropdown menus for the X and Y variables.</p></li>
@@ -696,11 +702,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ol type="1">
 <li><p>Put all the files your app needs in a single directory (the name of the directory will be the name of the app)</p></li>
 <li><p>Make sure there is a file called <code>app.R</code> with the call to <code>shinyApp()</code></p></li>
-<li><p><code>rsconnect::deployApp(&quot;/path/to/app/directory&quot;)</code></p></li>
+<li><p>Run <code>rsconnect::deployApp("/path/to/app/directory")</code>. You may need to connect your shinyapps.io account to deploy an app for the first time.</p></li>
 </ol>
 </section></section>
 <section><section id="project-1-user-interface" class="title-slide slide level1"><h1>Project 1: User Interface</h1></section><section id="building-a-user-interface" class="slide level2">
 <h2>Building a User Interface</h2>
+<p>Building a UI is comprised of three parts:</p>
 <ol type="1">
 <li>Instantiating input and output widgets</li>
 <li>Frameworks and layouts</li>
@@ -709,15 +716,26 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section><section id="widgets" class="slide level2">
 <h2>Widgets</h2>
 <ul>
-<li><p>Open <code>project1-ui</code> and take a look at <code>UI_starting.R</code> and <code>Knight_bus.R</code>.</p></li>
+<li><p>Go to <code>projects/project1-ui</code> and take a look at <code>UI_starting.R</code> and <code>Knight_bus.R</code>.</p></li>
 <li><p>Run <code>app.R</code>.</p></li>
-<li><p>We only see inputs because nothing is connected to the outputs.</p></li>
+<li><p><strong>Widgets</strong> are the different buttons and fields we see on a webpage.</p></li>
+<li><p>We only see the inputs from <code>UI_starting.R</code> because nothing is connected to the outputs.</p></li>
 </ul>
 </section><section id="the-shiny-widget-gallery" class="slide level2">
 <h2>The Shiny Widget Gallery</h2>
 <h3 id="input-widgets">Input Widgets</h3>
+<ul>
+<li><p>You can try out and play with Shiny input widgets on RStudio’s website.</p></li>
+<li><p>The website shows you how the values change when you modify the input widgets. The site will also show you the code you need to include the widget in your own app.</p></li>
+</ul>
 <p><a href="https://shiny.rstudio.com/gallery/widget-gallery.html" class="uri">https://shiny.rstudio.com/gallery/widget-gallery.html</a></p>
 </section><section id="output-widgets" class="slide level2">
+<h2>Output Widgets</h2>
+<ul>
+<li><p>Output widgets are similar to input widgets. However, output widgets require a <code>render</code> function to be visible in the app.</p></li>
+<li><p>Each output widget has its own corresponding <code>render</code> function.</p></li>
+</ul>
+</section><section id="output-widgets-1" class="slide level2">
 <h2>Output Widgets</h2>
 <p><img data-src="images/output-widgets.png" /></p>
 </section><section id="playing-with-widgets" class="slide level2">
@@ -736,7 +754,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section><section id="frameworks-and-layouts" class="slide level2">
 <h2>Frameworks and Layouts</h2>
 <ul>
-<li><p>Replace <code>UI_starting.R</code> with <code>UI_fluid_page.R</code></p></li>
+<li><p>Replace <code>UI_starting.R</code> with <code>UI_fluid_page.R</code> in the <code>app.R</code>.</p></li>
 <li><p>Run the app</p></li>
 <li><p>Pretty ugly, right? Now try replacing <code>tagList</code> with <code>fluidPage</code></p></li>
 </ul>
@@ -752,12 +770,17 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2><code>fluidRow()</code> and <code>column()</code></h2>
 <p>Changing <code>tagList</code> to <code>fluidPage</code> didn’t do much</p>
 <p>Let’s add some <code>fluidRows()</code> and <code>column()</code> functions to create this:</p>
-<p><img data-src="images/fluid-wide.png" /></p>
+<p><img data-src="images/fluid-wide.png" /> The solution is in <code>UI_language_soln.R</code></p>
 </section><section id="fluidpage-is-responsive" class="slide level2">
 <h2><code>fluidPage()</code> is responsive</h2>
-<p>Try adjusting the size of your browser window</p>
+<ul>
+<li><p>Try adjusting the size of your browser window.</p></li>
+<li><p>The text adjusts so that it all fits within a single window–no need to scroll left and right!</p></li>
+</ul>
 </section><section id="other-layouts" class="slide level2">
 <h2>Other Layouts</h2>
+<p>Check out the Shiny cheatsheet to see other types of layouts</p>
+<p><a href="https://shiny.rstudio.com/images/shiny-cheatsheet.pdf" class="uri">https://shiny.rstudio.com/images/shiny-cheatsheet.pdf</a></p>
 <ul>
 <li><p><code>tabsetPanel()</code> + <code>tabPanel()</code></p></li>
 <li><p><code>sidebarLayout()</code> + <code>sidebarPanel()</code>/<code>mainPanel()</code></p></li>
@@ -770,25 +793,22 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section><section id="project-2-reactives" class="title-slide slide level1"><h1>Project 2: Reactives</h1></section><section id="reactivity" class="slide level2">
 <h2>Reactivity</h2>
 <p>We’ve already seen some examples with our <code>render</code> functions, but what exactly is <strong>reactivity</strong>?</p>
-<p>Reactivity is a 2-step process</p>
-<ol type="1">
-<li><p><strong>Reactive values</strong> <em>notify</em> functions that use them when they become invalid</p></li>
-<li><p>Objects created by <strong>reactive functions</strong> <em>respond</em></p></li>
-</ol>
-</section><section id="some-reactive-functions" class="slide level2">
-<h2>Some Reactive Functions</h2>
-<ul>
-<li>render*() functions</li>
-<li>reactive()</li>
-<li>reactiveValues()</li>
-<li>eventReactive()</li>
-<li>observe()</li>
-<li>observeEvent()</li>
-</ul>
 </section><section id="more-harry-potter-comparisons" class="slide level2">
 <h2>More Harry Potter Comparisons</h2>
-<p>The Knight Bus is our connection between regular R code (Muggle World) and the world of reactives (Wizarding World)</p>
+<p>Remember, the Knight Bus is our connection between regular R code (Muggle World) and the world of reactives (Wizarding World)</p>
 <p><code>knight_bus &lt;- function(input, output, session) {</code> reactive code here! <code>}</code></p>
+</section><section id="reactives-an-example" class="slide level2">
+<h2>Reactives: An Example</h2>
+<pre><code>server &lt;- function(input, output) {
+    output$distPlot &lt;- renderPlot({
+        hist(rnorm(input$obs))
+    })
+}</code></pre>
+<p>In this example, input$obs is a reactive source, and output$distPlot is a reactive endpoint.</p>
+<ul>
+<li><p>Clicking or typing into input widgets will set some sort of value, or <strong>reactive source</strong>.</p></li>
+<li><p>A <strong>reactive endpoint</strong> is an object that appears in the app, like a plot, text, or values. Reactive endpoints re-execute when their reactive inputs change.</p></li>
+</ul>
 </section><section id="types-of-kb-passengers" class="slide level2">
 <h2>3 Types of KB Passengers</h2>
 <table>
@@ -822,41 +842,68 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </tr>
 </tbody>
 </table>
-</section><section id="reactives" class="slide level2">
-<h2>Reactives</h2>
-<p><strong><em>Reactives have 2 kinds of states</em></strong></p>
-<ol type="1">
-<li><strong>Their value</strong>, e.g. numerical/text value, plot, image</li>
-<li><strong>Their validity</strong>–validated, invalidated</li>
-</ol>
-<p><strong><em>Reactives have connections</em></strong></p>
+<ul>
+<li><p>Inputs are reactive sources. Reactive endpoints are called observers because they observe changes to inputs.</p></li>
+<li><p>Conductors act like both sources and endpoints. They depend on inputs, but they also provide inputs to other reactives.</p></li>
+</ul>
+</section><section id="reactives-have-connections" class="slide level2">
+<h2>Reactives have connections</h2>
 <ul>
 <li>Inputs have outward connections</li>
 <li>Observers have inward connections</li>
 <li>Conductors have both inward and outward connections</li>
 </ul>
-</section><section id="reactivity-diagram" class="slide level2">
-<h2>Reactivity Diagram</h2>
-<p><img data-src="images/reactivity.png" /></p>
+</section><section id="reactive-states" class="slide level2">
+<h2>Reactive States</h2>
+<p><strong><em>Reactives have 2 kinds of states</em></strong></p>
+<ol type="1">
+<li><strong>Their value</strong>, e.g. numerical/text value, plot, image</li>
+<li><strong>Their validity</strong>–validated, invalidated</li>
+</ol>
+<p><br></p>
+<ul>
+<li>Reactives are invalidated when their inputs change value. They become valid again when they recalculate or re-execute based on their input’s new value.</li>
+</ul>
 </section><section id="project-2-pythagorean-theorem" class="slide level2">
 <h2>Project 2: Pythagorean Theorem</h2>
+<p>This script calculates the hypotenuse of a right triangle using</p>
+<pre><code>output$C &lt;- renderText({
+    sqrt(input$A^2 + input$B^2)
+  })</code></pre>
 <ul>
 <li><p>Run <code>pythagorean-1.R</code> and change the input values a few times.</p></li>
 <li><p>Stop the app</p></li>
-<li><p>Run <code>reactlogShow()</code> (may need to install first)</p></li>
+<li><p>Run <code>reactlogShow()</code> in the console (may need to install first)</p></li>
+</ul>
+<p>A log will open in your browser</p>
+</section><section id="reactlogshow" class="slide level2">
+<h2>reactlogShow()</h2>
+<ul>
+<li><p>Click the forward arrow in the log window</p></li>
+<li><p>When input$A or input$B’s value changed, it became invalidated.</p></li>
+<li><p>This then invalidates output$C</p></li>
+<li><p>output$C becomes validated once it recalculates</p></li>
 </ul>
 </section><section id="adding-an-expression-modularizing-reactions" class="slide level2">
 <h2>Adding an expression: modularizing reactions</h2>
+<p>This script still calculates the hypotenuse but splits the calculation into two parts</p>
+<ol type="1">
+<li><p><code>C2 &lt;- reactive(input$A^2 + input$B^2, label = "C2")</code></p></li>
+<li><p><code>output$C &lt;- renderText(sqrt(C2()))</code></p></li>
+</ol>
 <ul>
 <li><p>Run <code>pythagorean-2.R</code> and change the input values.</p></li>
 <li><p>Stop the app</p></li>
 <li><p>Run <code>reactlogShow()</code></p></li>
 <li><p>Reactives are lazy and only update when they need to</p></li>
 </ul>
-</section><section id="reactives-vs.observers" class="slide level2">
+</section><section id="reactivity-diagram" class="slide level2">
+<h2>Reactivity Diagram</h2>
+<p><img data-src="images/reactivity.png" /></p>
+</section><section id="reactives-vs.-observers" class="slide level2">
 <h2>Reactives vs. observers</h2>
 <p><strong>Reactives</strong>: calculate or cache a value, meant to be used as a variable, has a result</p>
-<p><strong>Observers</strong>: runs some code when a dependency changes, doesn’t yield a result, isn’t used as input for other expressions, not assigned to a variable</p>
+<p><strong>Observers</strong>: for side effects–runs some code when a dependency changes, doesn’t yield a result, isn’t used as input for other expressions, not assigned to a variable (e.g., updating a menu based on a selection)</p>
 </section></section>
 <section><section id="project-3-plotting-a-data-frame" class="title-slide slide level1"><h1>Project 3: Plotting a Data Frame</h1></section><section id="objectives" class="slide level2">
 <h2>Objectives</h2>

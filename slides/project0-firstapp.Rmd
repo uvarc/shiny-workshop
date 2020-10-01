@@ -1,8 +1,12 @@
 ## The main file, **`app.R`**
 
-This file contains all the components of the app: the user interface and reactive logic.
+Go to the **projects** -> **project0-first-app** and open **app.R**.
 
-The UI and reactive logic can be in separate files that are sourced in `app.R` or all put in the same file.
+- This file contains all the components of the app: the user interface and reactive logic.
+
+- The UI and reactive logic can be written in separate .R files that are sourced in `app.R` or all put in the same file. 
+
+- In this case the UI is in `user_interface.R` and the reactive logic is in `reactive_logic.R`.
 
 ## `shinyApp()`
 
@@ -18,13 +22,15 @@ Let's start with `muggle.R` (our run-of-the-mill R code)
 
 - We create a function `muggle_plot` that takes variable names from the `diamonds` dataset as inputs and generates a scatterplot
 
-- Test it out if you want
+- Test it out if you want by uncommenting and running the last line of the script
 
 ## User Interface
 
-The function `tagList` takes HTML functions as inputs and creates a list of HTML components
+Open `user_interface.R`
 
-- Try running the first line, `h2("A very basic Shiny app")` in the console
+- The function `tagList` takes HTML functions as inputs and creates a list of HTML components
+
+- Try running the first line, `h2("A very basic Shiny app")` in the console (make sure you have `shiny` loaded)
 
 - Functions like `h2`, `p`, and `actionButton` are wrappers for HTML code (essentially strings)
 
@@ -33,19 +39,24 @@ The function `tagList` takes HTML functions as inputs and creates a list of HTML
 
 ## Reactive Logic
 
-We will connect the UI to the Muggle code with **reactive logic**
+Open `reactive_logic.R`
+
+- We will connect the UI to the Muggle code with **reactive logic**
 
 - We are assigning a function to `reactive_logic` with three arguments: `input`, `output`, and `session`. The arguments are always the same, but `reactive_logic` is usually called `server`.
 
 - Functions `renderPlot` and `renderText` are assigned to `output$IDname`. They correspond to the UI functions `plotOutput` and `textOutput`
 
-- Try running `renderText("Hello World!")`
 
 ## Invoking the App
 
 `shinyApp(user_interface, reactive_logic)`
 
+To run our app, we use the command `shinyApp`. The first argument is the UI, and the second argument is our reactive logic.
+
 ## Your Turn: Modify the App
+
+Try the following on your own!
 
 1. Hide the button message until the button has been clicked 3 times.
 
@@ -59,6 +70,6 @@ We will connect the UI to the Muggle code with **reactive logic**
 
 2. Make sure there is a file called `app.R` with the call to `shinyApp()`
 
-3. `rsconnect::deployApp("/path/to/app/directory")`
+3. Run `rsconnect::deployApp("/path/to/app/directory")`. You may need to connect your shinyapps.io account to deploy an app for the first time.
 
 
