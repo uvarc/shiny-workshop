@@ -4,6 +4,5 @@ hpc-support@virginia.edu
 
 | Office Hours | Zoom Link |
 ---          |      ---|
-Tuesday 3-5pm | https://virginia.zoom.us/j/304271094
-Wednesday 3-5pm | https://virginia.zoom.us/s/812332138
-Thursday 10am-12pm | https://virginia.zoom.us/j/723009972
+Tuesday 3-5pm | https://virginia.zoom.us/j/304271094?pwd=Szdib1kzK1QySlE4eGRGL1BiclpLUT09
+Thursday 10am-12pm | https://virginia.zoom.us/j/723009972?pwd=SWJMV09xMUp6M0lJY04yRXIwM1ZNdz09

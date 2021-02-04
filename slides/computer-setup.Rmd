@@ -1,7 +1,7 @@
 ## What You'll Need 
 
 1. **Development** server (just your computer!)
-2. **Deployment** server (shinyapps.io, DCOS)
+2. **Deployment** server (shinyapps.io, UVA Microservices)
 
 ## Development Server
 

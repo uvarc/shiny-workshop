@@ -34,6 +34,6 @@ Using **New Project** -> **Shiny Web App** creates a living, breathing Shiny App
 
 <br>
 
-It's still a working Shiny app--it's just doesn't do anything. Starting from the snippet is less error-prone than creating a new project and deleting the guts.
+It's still a working Shiny app--it just doesn't do anything. Starting from the snippet is less error-prone than creating a new project and deleting the guts.
 
 Stop an app by clicking the STOP button in the console.

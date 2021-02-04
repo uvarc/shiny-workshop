@@ -5,7 +5,7 @@ library(imager)
 library(stringr)
 
 # Set working directory
-setwd("~/shiny-valentine")
+setwd("~/Desktop/shiny-workshop/projects/office-valentine")
 
 # Load The Office dataset
 data <- theoffice
