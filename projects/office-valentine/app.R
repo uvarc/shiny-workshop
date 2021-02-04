@@ -12,12 +12,15 @@ server <- function(input, output, session) {
 
   
   output$valentine <- renderPlot({
-    input$go
-    my_valentine <- love_data[sample(1:nrow(love_data),1),]
-    img <- load.image(paste0("www/",my_valentine$character, ".jpg"))
-    plot(img, axes = F);
-    title(my_valentine$text)
-  })
+    if (input$go == 0) {
+      return()
+    }
+    else {
+      my_valentine <- love_data[sample(1:nrow(love_data),1),]
+      img <- load.image(paste0("www/",my_valentine$character, ".jpg"))
+      plot(img, axes = F);
+      title(my_valentine$text)
+  }})
   
   
 }
