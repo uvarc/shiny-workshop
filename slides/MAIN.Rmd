@@ -49,3 +49,31 @@ output:
 
 ```{r child="project3-data-frame.Rmd"}
 ```
+
+# {data-background-image="./images/title-slide.jpg"}
+
+
+# Four Approaches to Styling Shiny
+
+```{r child="four-approaches.Rmd"}
+```
+
+# Method 1: Accepting the Shiny Defaults
+
+```{r child="method1-defaults.Rmd"}
+```
+
+# Method 2: Shiny Themes
+
+```{r child="method2-themes.Rmd"}
+```
+
+# Method 3: Dashboards
+
+```{r child="method3-dashboards.Rmd"}
+```
+
+# Method 4: Bootstraplib
+
+```{r child="method4-bslib.Rmd"}
+```

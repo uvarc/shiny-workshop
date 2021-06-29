@@ -1,0 +1,5 @@
+## Credit where credit is due...
+
+<img src=./images/styling-shiny-talk.png style="height:60%;width:60%;display:block;margin-left:auto;margin-right:auto"></img>
+
+[Watch the Talk!](https://rstudio.com/resources/rstudioconf-2020/styling-shiny-apps-with-sass-and-bootstrap-4/)

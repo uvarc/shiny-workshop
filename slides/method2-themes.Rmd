@@ -1,0 +1,27 @@
+## Method 2: Shiny Themes
+
+The `shinythemes` package helps you spice up your app
+
+<img src=./images/shinythemes.png style="height:80%;width:80%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## shinythemes
+
+1. `install.packages("shinythemes")`
+
+2. Add `library(shinythemes)` to `app.R` or `ui.R`
+
+3. Add the `theme` argument to your `fluidPage()`, `navbarPage()`, etc. Set `theme` with `shinytheme("<theme>")`
+
+<img src=./images/shinytheme-code.png style="height:80%;width:80%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Bootswatch
+
+All Shiny Themes come from [bootswatch.com](bootswatch.com)
+
+<img src=./images/bootswatch.png style="height:75%;width:75%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Four approaches to Shiny styling
+
+- Method 1: Accepting the Shiny Defaults
+
+- Method 2: Shiny Themes

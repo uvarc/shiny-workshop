@@ -2,13 +2,13 @@
 library(shiny)
 
 source("muggle.R")         # our regular R code
-source("user_interface.R") # defines the user interface
+source("user_interface_soln.R") # defines the user interface
  
 
 # Set up the bridge to the Wizarding World
 reactive_logic <- function(input, output, session) {
-  source("reactive_logic.R", local = TRUE)
+  source("reactive_logic_soln.R", local = TRUE)
 }
 
 # Invoke the app!
-shinyApp(user_interface, reactive_logic)
+shinyApp(user_interface_soln, reactive_logic)

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>MAIN.utf8</title>
+  <title>MAIN.knit</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -949,6 +949,256 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li>Try <code>renderPrint</code></li>
 </ul>
+</section></section>
+<section id="section-2" class="title-slide slide level1" data-background-image="./images/title-slide.jpg"><h1></h1></section>
+<section><section id="four-approaches-to-styling-shiny" class="title-slide slide level1"><h1>Four Approaches to Styling Shiny</h1></section><section id="credit-where-credit-is-due" class="slide level2">
+<h2>Credit where credit is due…</h2>
+<p><img src=./images/styling-shiny-talk.png style="height:60%;width:60%;display:block;margin-left:auto;margin-right:auto"></img></p>
+<p><a href="https://rstudio.com/resources/rstudioconf-2020/styling-shiny-apps-with-sass-and-bootstrap-4/">Watch the Talk!</a></p>
+</section></section>
+<section><section id="method-1-accepting-the-shiny-defaults" class="title-slide slide level1"><h1>Method 1: Accepting the Shiny Defaults</h1></section><section id="method-1-accepting-the-shiny-defaults-1" class="slide level2">
+<h2>Method 1: Accepting the Shiny Defaults</h2>
+<p><img src=./images/defaults.png style="height:90%;width:90%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="fluidpage-1" class="slide level2">
+<h2>fluidPage()</h2>
+<p>Replace <code>fluidPage()</code> with <code>tagList()</code></p>
+<p><img src=./images/html.png style="height:80%;width:80%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="built-with-bootstrap" class="slide level2">
+<h2>Built with Bootstrap</h2>
+<ul>
+<li><p>Shiny’s default UI uses Bootstrap</p></li>
+<li><p>Bootstrap is a CSS framework developed by Twitter</p></li>
+<li><p>Easy to customize if you’re comfortable with HTML and CSS</p></li>
+</ul>
+</section><section id="millions-of-websites-use-bootstrap" class="slide level2">
+<h2>Millions of websites use Bootstrap</h2>
+<p><img src=./images/bootstrap.png style="height:80%;width:80%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="millions-of-websites-use-bootstrap-1" class="slide level2">
+<h2>Millions of websites use Bootstrap</h2>
+<p><img src=./images/rc-website.png style="height:80%;width:80%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="four-approaches-to-shiny-styling" class="slide level2">
+<h2>Four approaches to Shiny styling</h2>
+<ul>
+<li>Method 1: Accepting the Shiny Defaults</li>
+</ul>
+</section></section>
+<section><section id="method-2-shiny-themes" class="title-slide slide level1"><h1>Method 2: Shiny Themes</h1></section><section id="method-2-shiny-themes-1" class="slide level2">
+<h2>Method 2: Shiny Themes</h2>
+<p>The <code>shinythemes</code> package helps you spice up your app</p>
+<p><img src=./images/shinythemes.png style="height:80%;width:80%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="shinythemes" class="slide level2">
+<h2>shinythemes</h2>
+<ol type="1">
+<li><p><code>install.packages("shinythemes")</code></p></li>
+<li><p>Add <code>library(shinythemes)</code> to <code>app.R</code> or <code>ui.R</code></p></li>
+<li><p>Add the <code>theme</code> argument to your <code>fluidPage()</code>, <code>navbarPage()</code>, etc. Set <code>theme</code> with <code>shinytheme("&lt;theme&gt;")</code></p></li>
+</ol>
+<p><img src=./images/shinytheme-code.png style="height:80%;width:80%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="bootswatch" class="slide level2">
+<h2>Bootswatch</h2>
+<p>All Shiny Themes come from <a href="bootswatch.com">bootswatch.com</a></p>
+<p><img src=./images/bootswatch.png style="height:75%;width:75%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="four-approaches-to-shiny-styling-1" class="slide level2">
+<h2>Four approaches to Shiny styling</h2>
+<ul>
+<li><p>Method 1: Accepting the Shiny Defaults</p></li>
+<li><p>Method 2: Shiny Themes</p></li>
+</ul>
+</section></section>
+<section><section id="method-3-dashboards" class="title-slide slide level1"><h1>Method 3: Dashboards</h1></section><section id="method-3-dashboards-1" class="slide level2">
+<h2>Method 3: Dashboards</h2>
+<p>Packages like <code>flexdashboard</code> and <code>shinydashboard</code> let you create dashboards for your users</p>
+<p><img src=./images/dashboard.png style="height:75%;width:75%;display:block;margin-left:auto;margin-right:auto"></img></p>
+<p><a href="https://gallery.shinyapps.io/087-crandash/">https://gallery.shinyapps.io/087-crandash/</a></p>
+</section><section id="flexdashboard-vs-shinydashboard" class="slide level2">
+<h2><code>flexdashboard</code> vs <code>shinydashboard</code></h2>
+<table>
+<thead>
+<tr class="header">
+<th><code>flexdashboard</code></th>
+<th><code>shinydashboard</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R Markdown</td>
+<td>Shiny UI code</td>
+</tr>
+<tr class="even">
+<td>Super easy</td>
+<td>Not quite as easy</td>
+</tr>
+<tr class="odd">
+<td>Static or dynamic</td>
+<td>Dynamic</td>
+</tr>
+<tr class="even">
+<td>CSS flexbox layout</td>
+<td>Bootstrap grid layout</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>We’ll just touch on shinydashboard today</p>
+<p><br></p>
+<p><a href="http://rstudio.github.io/shinydashboard/get_started.html">http://rstudio.github.io/shinydashboard/get_started.html</a></p>
+</section><section id="components-of-a-dashboard" class="slide level2">
+<h2>Components of a dashboard</h2>
+<ol type="1">
+<li><p>Header</p></li>
+<li><p>Sidebar</p></li>
+<li><p>Body</p></li>
+</ol>
+<p><img src=./images/blank-dashboard.png style="height:85%;width:85%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="add-app-components-to-the-body-with-boxes" class="slide level2">
+<h2>Add app components to the body with <strong>boxes</strong></h2>
+<p>Boxes need to be put in a <code>fluidRow</code> or <code>column</code></p>
+<p><img src=./images/boxes-code.png style="height:85%;width:85%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="add-app-components-to-the-body-with-boxes-1" class="slide level2">
+<h2>Add app components to the body with <strong>boxes</strong></h2>
+<p><br></p>
+<p><img src=./images/boxes.png></img></p>
+</section><section id="add-menu-items-to-the-sidebar" class="slide level2">
+<h2>Add <strong>menu items</strong> to the sidebar</h2>
+<ul>
+<li><p>We’ll add <code>menuItems</code> that behave like tabs, similar to <code>tabPanel</code></p></li>
+<li><p><code>menuItems</code> in the sidebar correspond to <code>tabItems</code> in the body</p></li>
+</ul>
+<p><img src=./images/menu-items-code.png style="height:60%;width:60%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="add-menu-items-to-the-sidebar-1" class="slide level2">
+<h2>Add <strong>menu items</strong> to the sidebar</h2>
+<p><img src=./images/menu-items.png style="height:60%;width:60%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="change-color-of-dashboard" class="slide level2">
+<h2>Change color of dashboard</h2>
+<p>You can change the color of your dashboard with the <code>skin</code> argument (similar to <code>theme</code> with <code>shinythemes</code>)</p>
+<p><img src=./images/dashboard-skin.png></img></p>
+</section><section id="four-approaches-to-shiny-styling-2" class="slide level2">
+<h2>Four approaches to Shiny styling</h2>
+<ul>
+<li><p>Method 1: Accepting the Shiny Defaults</p></li>
+<li><p>Method 2: Shiny Themes</p></li>
+<li><p>Method 3: Dashboards</p></li>
+</ul>
+</section></section>
+<section><section id="method-4-bootstraplib" class="title-slide slide level1"><h1>Method 4: Bootstraplib</h1></section><section id="common-shiny-question" class="slide level2">
+<h2>Common Shiny Question</h2>
+<p>How do I customize my app so the fonts and colors match my university’s?</p>
+<p><img src=./images/uva-website.png style="display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="uva-branding" class="slide level2">
+<h2>UVA Branding</h2>
+<p><img src=./images/brand.png style="height:75%;width:75%;display:block;margin-left:auto;margin-right:auto"></img></p>
+<p><a href="https://brand.virginia.edu/">https://brand.virginia.edu/</a></p>
+</section><section id="modifying-css" class="slide level2">
+<h2>Modifying CSS</h2>
+<ul>
+<li><p>Requires you to know at least some CSS</p></li>
+<li><p>Each color value appears in multiple places</p></li>
+</ul>
+</section><section id="syntatically-awesome-style-sheets" class="slide level2">
+<h2>Syntatically Awesome Style Sheets</h2>
+<h3 id="css-with-superpowers">CSS with Superpowers</h3>
+<p><br></p>
+<p><img src=./images/sass.png style="height:50%;width:50%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="sass-allows-you-to-change-colors-and-fonts-using-variables" class="slide level2">
+<h2>Sass allows you to change colors and fonts using variables</h2>
+<p><img src=./images/sass-compiler.png style="height:95%;width:95%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="customize-bootstrap-with-sass" class="slide level2">
+<h2>Customize Bootstrap with Sass</h2>
+<p>Need to install 2 packages (requires shiny&gt;=1.6)</p>
+<ol type="1">
+<li><p><strong>sass</strong>: compile sass to css in R</p></li>
+<li><p><strong>bslib</strong>: customize Bootstrap in R</p></li>
+</ol>
+<p><a href="https://rstudio.github.io/bslib/">https://rstudio.github.io/bslib/</a></p>
+<p>Unfortunately doesn’t work with Shiny Dashboards – use fresh instead!</p>
+<p><a href="https://dreamrs.github.io/fresh/articles/vars-shinydashboard.html">https://dreamrs.github.io/fresh/articles/vars-shinydashboard.html</a></p>
+</section><section id="start-with-regular-shiny-code" class="slide level2">
+<h2>Start with regular Shiny code</h2>
+<ol type="1">
+<li>Load bslib</li>
+<li>Instantiate a <code>bs_theme</code> object</li>
+<li>Set <code>theme</code> to your <code>bs_theme</code> object in the UI</li>
+</ol>
+<pre><code>library(shiny)
+library(bslib) # step 1
+
+my_theme &lt;- bs_theme() # step 2
+
+ui &lt;- fluidPage(
+  theme = my_theme, # step 3
+  ...
+)  </code></pre>
+</section><section id="preview-your-app" class="slide level2">
+<h2>Preview your app</h2>
+<ol type="1">
+<li>Add <code>bs_themer()</code> to your server function</li>
+</ol>
+<pre><code>library(shiny)
+library(bslib) # step 1
+
+...
+
+server &lt;- function(input, output){
+   bs_themer()
+   
+   ##cool reactive logic##
+}
+</code></pre>
+</section><section id="adjust-colors-and-fonts" class="slide level2">
+<h2>Adjust colors and fonts</h2>
+<p><img src=./images/bslib.gif style="display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="copy-updates-to-app.r" class="slide level2">
+<h2>Copy updates to app.R</h2>
+<p>When you make changes in the Preview tool, code for updating your theme is printed to the console. Copy the updates to your Shiny app.</p>
+<pre><code>my_theme &lt;- bs_theme()
+
+# These lines are copied from the console (may need to update theme name)             
+my_theme &lt;- bs_theme_update(my_theme, bg = &quot;#4B3E23&quot;, fg = &quot;#000000&quot;)
+
+my_theme &lt;- bs_theme_update(my_theme, primary = &quot;#232D4B&quot;, success = &quot;#E57200&quot;, bootswatch = &quot;darkly&quot;)</code></pre>
+</section><section id="how-do-i-find-out-bootstrap-variable-names" class="slide level2">
+<h2>How do I find out Bootstrap variable names?</h2>
+<ul>
+<li><p>List of Bootstrap sass variables:</p>
+<p><a href="https://rstudio.github.io/bslib/articles/bs4-variables.html">https://rstudio.github.io/bslib/articles/bs4-variables.html</a></p></li>
+<li><p>bslib commands: <a href="https://rstudio.github.io/bslib/reference/index.html">https://rstudio.github.io/bslib/reference/index.html</a></p></li>
+</ul>
+</section><section id="theming-plots" class="slide level2">
+<h2>Theming Plots</h2>
+<p>The <code>thematic</code> package enables automatic theming of plots</p>
+<p>Install thematic with <code>remotes::install_github("rstudio/shiny")</code></p>
+<pre><code>library(thematic)
+
+thematic_on()
+onStop(thematic_off)</code></pre>
+</section><section id="great-for-dark-mode" class="slide level2">
+<h2>Great for Dark Mode!</h2>
+<p><img src=./images/plot.png style="height:95%;width:95%;display:block;margin-left:auto;margin-right:auto"></img></p>
+</section><section id="thank-you-questions" class="slide level2">
+<h2>Thank you! Questions?</h2>
+<p><a href="mailto:hpc-support@virginia.edu" class="email">hpc-support@virginia.edu</a></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Office Hours</th>
+<th>Zoom Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tuesday 3-5pm</td>
+<td><a href="https://virginia.zoom.us/j/304271094?pwd=Szdib1kzK1QySlE4eGRGL1BiclpLUT09" class="uri">https://virginia.zoom.us/j/304271094?pwd=Szdib1kzK1QySlE4eGRGL1BiclpLUT09</a></td>
+</tr>
+<tr class="even">
+<td>Thursday 10am-12pm</td>
+<td><a href="https://virginia.zoom.us/j/723009972?pwd=SWJMV09xMUp6M0lJY04yRXIwM1ZNdz09" class="uri">https://virginia.zoom.us/j/723009972?pwd=SWJMV09xMUp6M0lJY04yRXIwM1ZNdz09</a></td>
+</tr>
+</tbody>
+</table>
 </section></section>
     </div>
   </div>

@@ -1,0 +1,133 @@
+## Common Shiny Question
+
+How do I customize my app so the fonts and colors match my university's?
+
+<img src=./images/uva-website.png style="display:block;margin-left:auto;margin-right:auto"></img>
+
+## UVA Branding
+
+<img src=./images/brand.png style="height:75%;width:75%;display:block;margin-left:auto;margin-right:auto"></img>
+
+[https://brand.virginia.edu/](https://brand.virginia.edu/)
+
+## Modifying CSS
+
+- Requires you to know at least some CSS
+
+- Each color value appears in multiple places
+
+## Syntatically Awesome Style Sheets
+
+### CSS with Superpowers
+
+<br>
+
+<img src=./images/sass.png style="height:50%;width:50%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Sass allows you to change colors and fonts using variables
+
+<img src=./images/sass-compiler.png style="height:95%;width:95%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Customize Bootstrap with Sass
+
+Need to install 2 packages (requires shiny>=1.6)
+
+1. **sass**: compile sass to css in R
+
+2. **bslib**: customize Bootstrap in R
+
+[https://rstudio.github.io/bslib/](https://rstudio.github.io/bslib/)
+    
+Unfortunately doesn't work with Shiny Dashboards -- use fresh instead!
+
+[https://dreamrs.github.io/fresh/articles/vars-shinydashboard.html](https://dreamrs.github.io/fresh/articles/vars-shinydashboard.html)
+
+## Start with regular Shiny code
+
+1. Load bslib
+2. Instantiate a `bs_theme` object
+3. Set `theme` to your `bs_theme` object in the UI
+
+```
+library(shiny)
+library(bslib) # step 1
+
+my_theme <- bs_theme() # step 2
+
+ui <- fluidPage(
+  theme = my_theme, # step 3
+  ...
+)  
+```
+
+## Preview your app
+
+1. Add `bs_themer()` to your server function
+
+```
+library(shiny)
+library(bslib) # step 1
+
+...
+
+server <- function(input, output){
+   bs_themer()
+   
+   ##cool reactive logic##
+}
+
+```
+
+## Adjust colors and fonts
+
+<img src=./images/bslib.gif style="display:block;margin-left:auto;margin-right:auto"></img>
+
+## Copy updates to app.R
+
+When you make changes in the Preview tool, code for updating your theme is printed to the console. Copy the updates to your Shiny app.
+
+```
+my_theme <- bs_theme()
+
+# These lines are copied from the console (may need to update theme name)             
+my_theme <- bs_theme_update(my_theme, bg = "#4B3E23", fg = "#000000")
+
+my_theme <- bs_theme_update(my_theme, primary = "#232D4B", success = "#E57200", bootswatch = "darkly")
+```
+
+
+## How do I find out Bootstrap variable names?
+
+- List of Bootstrap sass variables:
+
+    [https://rstudio.github.io/bslib/articles/bs4-variables.html](https://rstudio.github.io/bslib/articles/bs4-variables.html)
+
+- bslib commands:
+    [https://rstudio.github.io/bslib/reference/index.html](https://rstudio.github.io/bslib/reference/index.html)
+    
+
+## Theming Plots
+
+The `thematic` package enables automatic theming of plots
+
+Install thematic with `remotes::install_github("rstudio/shiny")`
+
+```
+library(thematic)
+
+thematic_on()
+onStop(thematic_off)
+```
+
+## Great for Dark Mode!
+
+<img src=./images/plot.png style="height:95%;width:95%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Thank you! Questions?
+
+hpc-support@virginia.edu
+
+| Office Hours | Zoom Link |
+---          |      ---|
+Tuesday 3-5pm | https://virginia.zoom.us/j/304271094?pwd=Szdib1kzK1QySlE4eGRGL1BiclpLUT09
+Thursday 10am-12pm | https://virginia.zoom.us/j/723009972?pwd=SWJMV09xMUp6M0lJY04yRXIwM1ZNdz09

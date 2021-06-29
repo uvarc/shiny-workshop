@@ -7,7 +7,11 @@ package_list <- c(
   "shiny",           # ditto
   "shinyWidgets",    # workshop specific
   "shinyjs",         # workshop specific
+  "shinythemes",     # workshop specific
+  "shinydashboard",  # workshop specific
   "flexdashboard",   # workshop specific
+  "bslib",           # workshop specific
+  "thematic",        # workshop specific"
   "miniUI",          # workshop specific
   "learnr",          # workshop specific
   "plotly",          # workshop specific

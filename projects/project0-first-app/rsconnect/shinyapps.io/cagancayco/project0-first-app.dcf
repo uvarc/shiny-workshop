@@ -1,0 +1,12 @@
+name: project0-first-app
+title: project0-first-app
+username:
+account: cagancayco
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3584140
+bundleId: 4181923
+url: https://cagancayco.shinyapps.io/project0-first-app/
+when: 1612470273.38589
+asMultiple: FALSE
+asStatic: FALSE

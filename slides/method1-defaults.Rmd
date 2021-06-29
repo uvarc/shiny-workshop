@@ -1,0 +1,30 @@
+## Method 1: Accepting the Shiny Defaults
+
+<img src=./images/defaults.png style="height:90%;width:90%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## fluidPage()
+
+Replace `fluidPage()` with `tagList()`
+
+<img src=./images/html.png style="height:80%;width:80%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Built with Bootstrap
+
+- Shiny's default UI uses Bootstrap
+
+- Bootstrap is a CSS framework developed by Twitter
+
+- Easy to customize if you're comfortable with HTML and CSS
+
+## Millions of websites use Bootstrap
+
+<img src=./images/bootstrap.png style="height:80%;width:80%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Millions of websites use Bootstrap
+
+<img src=./images/rc-website.png style="height:80%;width:80%;display:block;margin-left:auto;margin-right:auto"></img>
+
+
+## Four approaches to Shiny styling
+
+- Method 1: Accepting the Shiny Defaults

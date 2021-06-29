@@ -1,0 +1,72 @@
+## Method 3: Dashboards
+
+Packages like `flexdashboard` and `shinydashboard` let you create dashboards for your users
+
+<img src=./images/dashboard.png style="height:75%;width:75%;display:block;margin-left:auto;margin-right:auto"></img>
+
+[https://gallery.shinyapps.io/087-crandash/](https://gallery.shinyapps.io/087-crandash/)
+
+## `flexdashboard` vs `shinydashboard`
+
+| `flexdashboard`    | `shinydashboard`      |
+|      ---           |       ---             |
+| R Markdown         | Shiny UI code         |
+| Super easy         | Not quite as easy     |
+| Static or dynamic  | Dynamic               |
+| CSS flexbox layout | Bootstrap grid layout |
+
+<br>
+
+We'll just touch on shinydashboard today
+
+<br>
+
+[http://rstudio.github.io/shinydashboard/get_started.html](http://rstudio.github.io/shinydashboard/get_started.html)
+
+## Components of a dashboard
+
+1. Header
+
+2. Sidebar
+
+3. Body
+
+<img src=./images/blank-dashboard.png style="height:85%;width:85%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Add app components to the body with **boxes**
+
+Boxes need to be put in a `fluidRow` or `column`
+
+<img src=./images/boxes-code.png style="height:85%;width:85%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Add app components to the body with **boxes**
+
+<br>
+
+<img src=./images/boxes.png></img>
+
+## Add **menu items** to the sidebar
+
+- We'll add `menuItems` that behave like tabs, similar to `tabPanel`
+
+- `menuItems` in the sidebar correspond to `tabItems` in the body
+
+<img src=./images/menu-items-code.png style="height:60%;width:60%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Add **menu items** to the sidebar
+
+<img src=./images/menu-items.png style="height:60%;width:60%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Change color of dashboard
+
+You can change the color of your dashboard with the `skin` argument (similar to `theme` with `shinythemes`)
+
+<img src=./images/dashboard-skin.png></img>
+
+## Four approaches to Shiny styling
+
+- Method 1: Accepting the Shiny Defaults
+
+- Method 2: Shiny Themes
+
+- Method 3: Dashboards
