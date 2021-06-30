@@ -1,8 +1,8 @@
 library(shiny)
-library(shinythemes)
+
 # Define UI for random distribution app ----
 ui <- fluidPage(
-  theme = shinytheme("darkly"),
+  
   # App title ----
   titlePanel("Tabsets"),
   
