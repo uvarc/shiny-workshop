@@ -11,4 +11,4 @@ reactive_logic <- function(input, output, session) {
 }
 
 # Invoke the app!
-shinyApp(user_interface_soln, reactive_logic)
+shinyApp(user_interface, reactive_logic)
