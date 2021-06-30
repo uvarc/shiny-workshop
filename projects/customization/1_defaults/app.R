@@ -1,7 +1,7 @@
 library(shiny)
 
 # Define UI for random distribution app ----
-ui <- fluidPage(
+ui <- tagList(
   
   # App title ----
   titlePanel("Tabsets"),
