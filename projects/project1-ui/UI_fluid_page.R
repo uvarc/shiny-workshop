@@ -1,6 +1,6 @@
 # See Muggle.R for these definitions
 UI <- 
-  fluidPage(
+  tagList(
     First,
     Second,
     Third,
