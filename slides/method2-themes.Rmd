@@ -16,9 +16,20 @@ The `shinythemes` package helps you spice up your app
 
 ## Bootswatch
 
-All Shiny Themes come from [bootswatch.com](bootswatch.com)
+All Shiny Themes come from [bootswatch.com](https://bootswatch.com)
 
 <img src=./images/bootswatch.png style="height:75%;width:75%;display:block;margin-left:auto;margin-right:auto"></img>
+
+## Using Themes Not Included in shinythemes
+
+1. Download the CSS files
+
+2. Add .css file to www folder in app directory
+
+3. Set `theme = "myfile.css"`
+
+Try this with the "Quartz" theme!
+
 
 ## Four approaches to Shiny styling
 
