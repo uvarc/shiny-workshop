@@ -21,7 +21,7 @@ Poke around RStudio and try on your own!
 
 ## Old Faithful
 
-Using **New Project** -> **Shiny Web App** creates a living, breathing Shiny App
+Using **New File** -> **Shiny Web App...** creates a living, breathing Shiny App
 
 ![](images/old-faithful.png)
 

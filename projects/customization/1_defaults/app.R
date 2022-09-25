@@ -1,7 +1,21 @@
 library(shiny)
+library(bslib)
+library(thematic)
+
+thematic_on()
+onStop(thematic_off)
+
+# BS Theme
+
+my_theme <- bs_theme()
+
+my_theme <- bs_theme_update(my_theme, bg = "#232D4B", fg = "#fff", primary = "#E57200")
 
 # Define UI for random distribution app ----
-ui <- tagList(
+ui <- fluidPage(
+  
+  # Theme settings
+  theme = my_theme,
   
   # App title ----
   titlePanel("Tabsets"),
@@ -47,6 +61,11 @@ ui <- tagList(
 
 # Define server logic for random distribution app ----
 server <- function(input, output) {
+  
+  # Preview app
+  #bs_themer()
+  
+  
   
   # Reactive expression to generate the requested distribution ----
   # This is called whenever the inputs change. The output functions

@@ -40,3 +40,4 @@ fitted_model <- reactive({
 output$regression_table <- renderPrint({
   summary(fitted_model())
 })
+
