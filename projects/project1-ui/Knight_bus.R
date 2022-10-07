@@ -5,3 +5,5 @@
 #
 # Except when we get to the bit about writing values
 # to `output$felix`
+
+output$felix <- renderText(input$annie)

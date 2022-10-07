@@ -82,7 +82,7 @@ server <- function(input, output, session) {
     valueBox(
       value = formatC(avg_weight, digits = 1, format = "f"),
       subtitle = "Average Weight (grams)",
-      icon = icon("weight"),
+      icon = icon("weight-scale"),
       color = if (avg_weight < 75) "red" else if (avg_weight >= 75 && avg_weight < 150) "yellow" else "green"
     )
     
