@@ -1,0 +1,46 @@
+## Let's Make a Dashboard!
+
+<img src=./images/chicks.jpg style="display:block;margin-left:auto;margin-right:auto"></img>
+
+## Objective
+The built-in ChickWeight dataset contains four variables: weight (g), Time (age in days), Chick (ID), and Diet. Let's create a dashboard with 2 tabs. The dashboard will have a slider for Time, so we can see the chicks' weights at a particular point in time.
+
+The first tab will contain value boxes, an image of our chicks, and a plot of weight vs Chick ID. The second tab will contain a table of the raw data.
+
+## Dashboard Sidebar
+The sidebar will have two components: 
+
+1. a slider for Time, that filters data for chosen time point
+2. a menu with items for the main dashboard page and the raw data
+
+## Value Boxes
+
+- Box 1: Number of Chicks
+- Box 2: Days Since Birth
+- Box 3: Average Weight
+
+For Box 3, have the box change color based on the average weight.
+- Red: < 75
+- Yellow: >= 75 & < 150
+- Green: >= 150
+
+## Chick Image and Plot
+
+Add chicks.jpg (located in www folder) to the dashboard.
+
+Create a scatter plot of weight vs Chick, grouped by Diet.
+
+## Bonus
+
+Add some UVA colors!
+
+Use adminlte_color and adminlte_sidebar.
+
+## Thank you! Questions?
+
+https://www.rc.virginia.edu/form/support-request/
+
+| Office Hours | Zoom Link |
+---          |      ---|
+Tuesday 3-5pm | https://virginia.zoom.us/j/304271094?pwd=Szdib1kzK1QySlE4eGRGL1BiclpLUT09
+Thursday 10am-12pm | https://virginia.zoom.us/j/723009972?pwd=SWJMV09xMUp6M0lJY04yRXIwM1ZNdz09

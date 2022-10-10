@@ -120,11 +120,3 @@ onStop(thematic_off)
 
 <img src=./images/plot.png style="height:95%;width:95%;display:block;margin-left:auto;margin-right:auto"></img>
 
-## Thank you! Questions?
-
-hpc-support@virginia.edu
-
-| Office Hours | Zoom Link |
----          |      ---|
-Tuesday 3-5pm | https://virginia.zoom.us/j/304271094?pwd=Szdib1kzK1QySlE4eGRGL1BiclpLUT09
-Thursday 10am-12pm | https://virginia.zoom.us/j/723009972?pwd=SWJMV09xMUp6M0lJY04yRXIwM1ZNdz09

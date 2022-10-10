@@ -2,6 +2,16 @@ library(shiny)
 library(shinydashboard)
 library(dplyr)
 library(ggplot2)
+library(fresh)
+
+mytheme <- create_theme(
+  adminlte_color(
+    light_blue = "#232D4B"
+  ),
+  adminlte_sidebar(
+    dark_color = "#E57200"
+  )
+)
 
 ui <- dashboardPage(
   dashboardHeader(title = "Chick Weight"),
@@ -13,6 +23,7 @@ ui <- dashboardPage(
                    
                    ),
   dashboardBody(
+    use_theme(mytheme),
     tabItems(
       tabItem(tabName = "dashboard",
               fluidRow(
@@ -94,12 +105,6 @@ server <- function(input, output, session) {
     ggplot(time_df(), aes(x=Chick, y=weight, color=Diet)) + geom_point()
     
   })
-  
-  
-  
-  
-  
-  
   
 }
 

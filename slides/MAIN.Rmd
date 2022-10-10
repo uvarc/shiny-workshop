@@ -77,3 +77,8 @@ output:
 
 ```{r child="method4-bslib.Rmd"}
 ```
+
+# Let's Make a Dashboard!
+
+```{r child="dashboard.Rmd"}
+```
