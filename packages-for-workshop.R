@@ -17,7 +17,8 @@ package_list <- c(
   "plotly",          # workshop specific
   "revealjs",        # just for compiling slide collection
   "mosaic",          # some data sets, etc
-  "DT"               # data tables
+  "DT",              # data tables
+  "fresh"            # workshop specific
   )
 
 # Run this 
