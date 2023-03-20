@@ -801,18 +801,6 @@ functions <code>plotOutput</code> and <code>textOutput</code></p></li>
 <p>To run our app, we use the command <code>shinyApp</code>. The first
 argument is the UI, and the second argument is our reactive logic.</p>
 </section>
-<section id="your-turn-modify-the-app" class="slide level2">
-<h2>Your Turn: Modify the App</h2>
-<p>Try the following on your own!</p>
-<ol type="1">
-<li><p>Hide the button message until the button has been clicked 3
-times.</p></li>
-<li><p>Add <code>selectInput</code> dropdown menus for the X and Y
-variables.</p></li>
-<li><p>(Superstar) Connect the <code>selectInput</code> menus to the
-plot (we haven’t covered this yet)</p></li>
-</ol>
-</section>
 <section id="deploying-the-app" class="slide level2">
 <h2>Deploying the App</h2>
 <ol type="1">
@@ -823,6 +811,18 @@ to <code>shinyApp()</code></p></li>
 <li><p>Run <code>rsconnect::deployApp("/path/to/app/directory")</code>.
 You may need to connect your shinyapps.io account to deploy an app for
 the first time.</p></li>
+</ol>
+</section>
+<section id="your-turn-modify-the-app" class="slide level2">
+<h2>Your Turn: Modify the App</h2>
+<p>Try the following on your own!</p>
+<ol type="1">
+<li><p>Hide the button message until the button has been clicked 3
+times.</p></li>
+<li><p>Add <code>selectInput</code> dropdown menus for the X and Y
+variables.</p></li>
+<li><p>(Superstar) Connect the <code>selectInput</code> menus to the
+plot (we haven’t covered this yet)</p></li>
 </ol>
 </section></section>
 <section>
@@ -1550,6 +1550,11 @@ Red: &lt; 75 - Yellow: &gt;= 75 &amp; &lt; 150 - Green: &gt;= 150</p>
 <h2>Chick Image and Plot</h2>
 <p>Add chicks.jpg (located in www folder) to the dashboard.</p>
 <p>Create a scatter plot of weight vs Chick, grouped by Diet.</p>
+</section>
+<section id="bonus" class="slide level2">
+<h2>Bonus</h2>
+<p>Add some UVA colors!</p>
+<p>Use adminlte_color and adminlte_sidebar.</p>
 </section>
 <section id="thank-you-questions" class="slide level2">
 <h2>Thank you! Questions?</h2>

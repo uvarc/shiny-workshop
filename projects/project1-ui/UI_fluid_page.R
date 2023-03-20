@@ -1,10 +1,9 @@
 # See Muggle.R for these definitions
 UI <- 
-  fluidPage(
-    fluidRow(
-      column(4, First, Second),
-      column(3, Third)
-    ),
+  tagList(
+    First, 
+    Second,
+    Third,
     Fourth,
     Fifth
 )

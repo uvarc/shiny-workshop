@@ -54,6 +54,16 @@ Open `reactive_logic.R`
 
 To run our app, we use the command `shinyApp`. The first argument is the UI, and the second argument is our reactive logic.
 
+
+## Deploying the App
+
+1. Put all the files your app needs in a single directory (the name of the directory will be the name of the app)
+
+2. Make sure there is a file called `app.R` with the call to `shinyApp()`
+
+3. Run `rsconnect::deployApp("/path/to/app/directory")`. You may need to connect your shinyapps.io account to deploy an app for the first time.
+
+
 ## Your Turn: Modify the App
 
 Try the following on your own!
@@ -64,12 +74,5 @@ Try the following on your own!
 
 3. (Superstar) Connect the `selectInput` menus to the plot (we haven't covered this yet)
 
-## Deploying the App
-
-1. Put all the files your app needs in a single directory (the name of the directory will be the name of the app)
-
-2. Make sure there is a file called `app.R` with the call to `shinyApp()`
-
-3. Run `rsconnect::deployApp("/path/to/app/directory")`. You may need to connect your shinyapps.io account to deploy an app for the first time.
 
 
